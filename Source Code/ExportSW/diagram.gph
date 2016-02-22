@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-diagram PUBLIC "-//IBM//DTD Web Diagram 1.1//EN" "http://www.ibm.com/dtd/web-diagram_1_1.dtd">
+<web-diagram>
+    <properties>
+        <property name="Module Name" value="&lt;default module&gt;"/>
+    </properties>
+    <nodes>
+        <node id="n0" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/ViewExporter"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="605" y="642"/>
+        </node>
+        <node id="n1" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/success.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="272" y="545"/>
+        </node>
+        <node id="n2" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/certificateRequestDetail.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="547" y="225"/>
+        </node>
+        <node id="n3" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/ViewShipmentCertificate"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="552" y="321"/>
+        </node>
+        <node id="n4" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/certificateRequest.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="754" y="33"/>
+        </node>
+        <node id="n5" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/verifyExporterCertResult.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="-479" y="353"/>
+        </node>
+        <node id="n6" type="com.ibm.etools.struts.graphical.providers.model.FormBeanProvider">
+            <properties>
+                <property name="Form Bean Name" value="ExporterForm"/>
+                <property name="Form Bean Scope" value="request"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="386" y="545"/>
+        </node>
+        <node id="n7" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PrepareModifyExporter"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="-21" y="449"/>
+        </node>
+        <node id="n8" type="com.ibm.etools.struts.graphical.providers.model.FormBeanProvider">
+            <properties>
+                <property name="Form Bean Name" value="CertificateRequestForm"/>
+                <property name="Form Bean Scope" value="request"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="912" y="97"/>
+        </node>
+        <node id="n9" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PerformCertificateRequest"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="897" y="33"/>
+        </node>
+        <node id="n10" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PrepareExporterCertRequest"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="345" y="257"/>
+        </node>
+        <node id="n11" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PerformExporterCertRequest"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="216" y="641"/>
+        </node>
+        <node id="n12" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PrepareCertificateRequest"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="546" y="33"/>
+        </node>
+        <node id="n13" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/viewCertificateRequestDetail.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="732" y="321"/>
+        </node>
+        <node id="n14" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/login.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="185" y="193"/>
+        </node>
+        <node id="n15" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/viewCertificateRequest.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="740" y="129"/>
+        </node>
+        <node id="n16" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/exporterCertificate.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="-112" y="353"/>
+        </node>
+        <node id="n17" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PrepareViewCertificateRequest"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="541" y="129"/>
+        </node>
+        <node id="n18" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/ViewExporterCertificate"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="-118" y="257"/>
+        </node>
+        <node id="n19" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/viewExporter.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="769" y="641"/>
+        </node>
+        <node id="n20" type="com.ibm.etools.struts.graphical.providers.model.FormBeanProvider">
+            <properties>
+                <property name="Form Bean Name" value="LoginForm"/>
+                <property name="Form Bean Scope" value="request"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="162" y="97"/>
+        </node>
+        <node id="n21" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/error.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="-72" y="449"/>
+        </node>
+        <node id="n22" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/ViewCertificateRequestDetail"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="733" y="225"/>
+        </node>
+        <node id="n23" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/certificateRequestExporter.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="351" y="385"/>
+        </node>
+        <node id="n24" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/index.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="55" y="257"/>
+        </node>
+        <node id="n25" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/exporter.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="141" y="449"/>
+        </node>
+        <node id="n26" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/VerifyExporterCertificate"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="-281" y="353"/>
+        </node>
+        <node id="n27" type="com.ibm.etools.struts.graphical.providers.model.FormBeanProvider">
+            <properties>
+                <property name="Form Bean Name" value="VerifyExporterCertificateForm"/>
+                <property name="Form Bean Scope" value="request"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="-269" y="417"/>
+        </node>
+        <node id="n28" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PerformAddExporter"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="243" y="449"/>
+        </node>
+        <node id="n29" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PerformLogout"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="131" y="545"/>
+        </node>
+        <node id="n30" type="com.ibm.etools.struts.graphical.providers.model.FormBeanProvider">
+            <properties>
+                <property name="Form Bean Name" value="ExporterCertRequestForm"/>
+                <property name="Form Bean Scope" value="request"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="109" y="641"/>
+        </node>
+        <node id="n31" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PerformLogin"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="39" y="97"/>
+        </node>
+        <node id="n32" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/PrepareAddExporter"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="115" y="353"/>
+        </node>
+        <node id="n33" type="com.ibm.etools.struts.graphical.providers.model.ActionMappingProvider">
+            <properties>
+                <property name="Action Mapping Name" value="/VerifyShipmentCertificate"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="740" y="417"/>
+        </node>
+        <node id="n34" type="com.ibm.etools.struts.graphical.providers.model.FormBeanProvider">
+            <properties>
+                <property name="Form Bean Name" value="VerifyShipmentCertificateForm"/>
+                <property name="Form Bean Scope" value="request"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="753" y="513"/>
+        </node>
+        <node id="n35" type="com.ibm.etools.model2.web.providers.model.WebPageProvider">
+            <properties>
+                <property name="Web Page Path" value="/verifyShipmentCertResult.jsp"/>
+                <property name="hidden" value="false"/>
+            </properties>
+            <location x="553" y="417"/>
+        </node>
+    </nodes>
+    <edges>
+        <edge source="n28" target="n1" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingGlobalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n33" target="n35" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n17" target="n15" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n7" target="n25" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n24" target="n18" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n23" target="n11" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n33" target="n34" type="com.ibm.etools.struts.graphical.providers.edge.FormBeanEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n31" target="n24" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n31" target="n14" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingInputEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n18" target="n16" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n9" target="n8" type="com.ibm.etools.struts.graphical.providers.edge.FormBeanEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n29" target="n1" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingGlobalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n24" target="n14" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n28" target="n25" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingInputEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n25" target="n28" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n11" target="n1" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n14" target="n31" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n16" target="n26" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n28" target="n6" type="com.ibm.etools.struts.graphical.providers.edge.FormBeanEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n13" target="n33" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n3" target="n13" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n11" target="n30" type="com.ibm.etools.struts.graphical.providers.edge.FormBeanEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n2" target="n3" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n31" target="n20" type="com.ibm.etools.struts.graphical.providers.edge.FormBeanEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n26" target="n5" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n26" target="n27" type="com.ibm.etools.struts.graphical.providers.edge.FormBeanEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n24" target="n32" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n10" target="n23" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n32" target="n25" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n24" target="n10" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n22" target="n2" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n12" target="n4" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n15" target="n22" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+        <edge source="n9" target="n12" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingInputEdgeProvider">
+            <properties/>
+            <bendpoints>
+                <bendpoint weight="0.5">
+                    <dimensions>
+                        <dimension height="-45" width="-163"/>
+                        <dimension height="-45" width="188"/>
+                    </dimensions>
+                </bendpoint>
+            </bendpoints>
+        </edge>
+        <edge source="n0" target="n19" type="com.ibm.etools.struts.graphical.providers.edge.ActionMappingLocalForwardEdgeProvider">
+            <properties>
+                <property name="Forward Name" value="success"/>
+            </properties>
+        </edge>
+        <edge source="n4" target="n9" type="com.ibm.etools.model2.web.providers.edge.WebPageLinkEdgeProvider">
+            <properties/>
+        </edge>
+    </edges>
+</web-diagram>

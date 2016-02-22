@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="THeAnimalRemainsExportCertificate_0_1" xmlns:THeAREC="THeAnimalRemainsExportCertificate_0_1" xmlns:TH-TDED="THeDOCS TDED" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xsd:element name="AnimalRemainsExportCertificate" type="THeAREC:AnimalRemainsExportCertificateType"/>
+  <xsd:complexType name="AnimalRemainsExportCertificateType">
+    <xsd:sequence>
+      <xsd:element name="DocumentHeader" type="TH-TDED:DocumentHeaderType" minOccurs="0"/>
+      <xsd:element name="ConsignorParty" type="TH-TDED:ConsignorPartyType" minOccurs="0"/>
+      <xsd:element name="GoodsItem" type="THeAREC:GoodsItemType" minOccurs="0"/>
+      <xsd:element name="ExportPurpose" type="UN-TDED:FreeTextTextType" minOccurs="0"/>
+      <xsd:element name="ConsignmentInformation" type="THeAREC:ConsignmentInformationType" minOccurs="0"/>
+      <xsd:element name="MarkingInformation" type="THeAREC:MarkingInformationType" minOccurs="0"/>
+      <xsd:element name="DocumentSummary" type="TH-TDED:DocumentSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentInformationType">
+    <xsd:sequence>
+      <xsd:element name="ConsignmentTransportDetails" type="THeAREC:ConsignmentTransportDetailsType" minOccurs="0"/>
+      <xsd:element name="ProductOriginAddress" type="THeAREC:ProductOriginAddressType" minOccurs="0"/>
+      <xsd:element name="DeliveryAddress" type="THeAREC:DeliveryAddressType" minOccurs="0"/>
+      <xsd:element name="DischargeAddress" type="THeAREC:DischargeAddressType" minOccurs="0"/>
+      <xsd:element name="CountryOfDestination" type="TH-TDED:CountryOfDestinationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentTransportDetailsType">
+    <xsd:sequence>
+      <xsd:element name="TransportMode" type="TH-TDED:TransportModeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DeliveryAddressType">
+    <xsd:sequence>
+      <xsd:element name="AddressStructured" type="TH-TDED:AddressStructuredType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DischargeAddressType">
+    <xsd:sequence>
+      <xsd:element name="AddressStructured" type="THeAREC:DischargeAddressStructuredType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DischargeAddressStructuredType">
+    <xsd:sequence>
+      <xsd:element name="Street" type="UN-TDED:PostalDeliveryPointTextType" minOccurs="0"/>
+      <xsd:element name="City" type="UN-TDED:CityNameTextType" minOccurs="0"/>
+      <xsd:element name="CountrySub-entity" type="UN-TDED:CountrySubdivisionTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemType">
+    <xsd:sequence>
+      <xsd:element name="ItemValues" type="THeAREC:ItemValuesType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemQuantityType">
+    <xsd:sequence>
+      <xsd:element name="Quantity" type="UN-TDED:QuantityQuantityType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemValuesType">
+    <xsd:sequence>
+      <xsd:element name="LiveAnimalQuantity" type="THeAREC:ItemQuantityType" minOccurs="0"/>
+      <xsd:element name="AnimalRemainsQuantity" type="THeAREC:ItemQuantityType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MarkingInformationType">
+    <xsd:sequence>
+      <xsd:element name="MarkingType" type="UN-TDED:FreeTextTextType" minOccurs="0"/>
+      <xsd:element name="MarkingLocation" type="UN-TDED:FreeTextTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductOriginAddressType">
+    <xsd:sequence>
+      <xsd:element name="AddressStructured" type="THeAREC:ProductOriginAddressStructuredType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductOriginAddressStructuredType">
+    <xsd:sequence>
+      <xsd:element name="City" type="UN-TDED:CityNameTextType" minOccurs="0"/>
+      <xsd:element name="CountrySub-entity" type="UN-TDED:CountrySubdivisionTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="THeExportEntry_0_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:TH-TDED="THeDOCS TDED" xmlns:THeEE="THeExportEntry_0_1">
+  <xsd:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xsd:element name="ExportEntry" type="THeEE:ExportEntryType"/>
+  <xsd:complexType name="ExportEntryType">
+    <xsd:sequence>
+      <xsd:element name="DocumentHeader" type="TH-TDED:DocumentHeaderType" minOccurs="0"/>
+      <xsd:element name="CustomsInformation" type="THeEE:CustomsInformationType" minOccurs="0"/>
+      <xsd:element name="DocumentDetailsTransport" type="THeEE:DocumentDetailsTransportType" minOccurs="0"/>
+      <xsd:element name="ConsignmentInformation" type="THeEE:ConsignmentInformationType" minOccurs="0"/>
+      <xsd:element name="DocumentSummary" type="TH-TDED:DocumentSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentInformationType">
+    <xsd:sequence>
+      <xsd:element name="ConsigneeParty" type="TH-TDED:ConsigneePartyType" minOccurs="0"/>
+      <xsd:element name="ConsignorParty" type="TH-TDED:ConsignorPartyType" minOccurs="0"/>
+      <xsd:element name="CountryOfDestination" type="TH-TDED:CountryOfDestinationType" minOccurs="0"/>
+      <xsd:element name="CountryOfPurchase" type="THeEE:CountryOfPurchaseType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTransportDetails" type="THeEE:ConsignmentTransportDetailsType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTotals" type="THeEE:ConsignmentTotalsType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CommodityCodeType">
+    <xsd:sequence>
+      <xsd:element name="CommodityCode" type="UN-TDED:GoodsItemCustomsRequiredIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentTransportDetailsType">
+    <xsd:sequence>
+      <xsd:element name="TransportMeans" type="TH-TDED:TransportMeansType" minOccurs="0"/>
+      <xsd:element name="TransportMode" type="TH-TDED:TransportModeType" minOccurs="0"/>
+      <xsd:element name="PortOfDischarge" type="TH-TDED:PortOfDischargeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CountryOfPurchaseType">
+    <xsd:sequence>
+      <xsd:element name="CountryCode" type="UN-TDED:CountryIdentificationIdentifierType"/>
+      <xsd:element name="CountryName" type="UN-TDED:CountryNameTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentTotalsType">
+    <xsd:sequence>
+      <xsd:element name="GoodsItemPackaging" type="THeEE:GoodsItemPackagingType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CustomsClearancePartyType">
+    <xsd:sequence>
+      <xsd:element name="CustomsClearanceID" type="UN-TDED:PartyIdentificationIdentifierType" minOccurs="0"/>
+      <xsd:element name="CustomsClearanceName" type="UN-TDED:PartyNameTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CustomsInformationType">
+    <xsd:sequence>
+      <xsd:element name="CustomsClearanceParty" type="THeEE:CustomsClearancePartyType" minOccurs="0"/>
+      <xsd:element name="ExportLicenseReference" type="THeEE:ExportLicenseReferenceType" minOccurs="0"/>
+      <xsd:element name="ForeignTransactionFormReference" type="THeEE:ForeignTransactionFormReferenceType" minOccurs="0"/>
+      <xsd:element name="InspectionOrder" type="UN-TDED:InformationDetailsTextType" minOccurs="0"/>
+      <xsd:element name="ExchangeRate" type="THeEE:ExchangeRateType" minOccurs="0"/>
+      <xsd:element name="AdditionalInformationText" type="UN-TDED:InformationDetailsTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CustomsTariffQuantityType">
+    <xsd:sequence>
+      <xsd:element name="TariffQuantity" type="UN-TDED:GoodsItemCustomsTariffQuantityType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CustomsValueType">
+    <xsd:sequence>
+      <xsd:element name="AmountValue" type="UN-TDED:GoodsItemCustomsPurposeAmountType"/>
+      <xsd:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DepositAmountType">
+    <xsd:sequence>
+      <xsd:element name="DepositAmount" type="UN-TDED:MonetaryAmountAmountType" minOccurs="0"/>
+      <xsd:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentDetailsTransportType">
+    <xsd:sequence>
+      <xsd:element name="GoodsItem" type="THeEE:GoodsItemType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ExchangeRateType">
+    <xsd:sequence>
+      <xsd:element name="ExchangeRate" type="UN-TDED:CurrencyExchangeRateNumericType" minOccurs="0"/>
+      <xsd:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ExportEntryTotalsType">
+    <xsd:sequence>
+      <xsd:element name="TaxAmount" type="THeEE:TaxAmountType"/>
+      <xsd:element name="DepositAmount" type="THeEE:DepositAmountType" minOccurs="0"/>
+      <xsd:element name="PaymentReference" type="THeEE:PaymentReferenceType" minOccurs="0"/>
+      <xsd:element name="NetWeight" type="TH-TDED:GoodsItemNetWeightType" minOccurs="0"/>
+      <xsd:element name="TotalTaxAmount" type="THeEE:TaxAmountType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ExportLicenseReferenceType">
+    <xsd:sequence>
+      <xsd:element name="ExportLicenseNumber" type="UN-TDED:DocumentIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ForeignTransactionFormReferenceType">
+    <xsd:sequence>
+      <xsd:element name="ForeignTransactionFormDate" type="UN-TDED:DateDateDateTimeType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemPackagingType">
+    <xsd:sequence>
+      <xsd:element name="ShippingMark" type="UN-TDED:ItemShippingMarksTextType" minOccurs="0"/>
+      <xsd:element name="TransportEquipment" type="THeEE:TransportEquipmentType" minOccurs="0"/>
+      <xsd:element name="NumberOfPackages" type="UN-TDED:PackageQuantityType"/>
+      <xsd:element name="KindOfPackages" type="UN-TDED:PackageTypeTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemType">
+    <xsd:sequence>
+      <xsd:element name="ItemID" type="UN-TDED:LineItemSequenceIdentifierType" minOccurs="0"/>
+      <xsd:element name="ItemDescription" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xsd:element name="GoodsItemPackaging" type="THeEE:GoodsItemPackagingType" maxOccurs="99"/>
+      <xsd:element name="GoodsItemMeasurements" type="THeEE:GoodsItemMeasurementsType" minOccurs="0"/>
+      <xsd:element name="CommodityCodeType" type="THeEE:CommodityCodeType" minOccurs="0"/>
+      <xsd:element name="StatisticalCodeType" type="THeEE:StatisticalCodeType" minOccurs="0"/>
+      <xsd:element name="ItemUnitPrice" type="THeEE:ItemUnitPriceType" minOccurs="0" maxOccurs="99"/>
+      <xsd:element name="CustomsValue" type="THeEE:CustomsValueType" minOccurs="0"/>
+      <xsd:element name="TaxInformation" type="THeEE:TaxInformationType" minOccurs="0"/>
+      <xsd:element name="CustomsTariffQuantity" type="THeEE:CustomsTariffQuantityType" minOccurs="0"/>
+      <xsd:element name="PrivilegeCode" type="UN-TDED:InformationDetailsTextType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemMeasurementsType">
+    <xsd:sequence>
+      <xsd:element name="GrossWeight" type="TH-TDED:GoodsItemGrossWeightType" minOccurs="0"/>
+      <xsd:element name="NetWeight" type="TH-TDED:GoodsItemNetWeightType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemUnitPriceType">
+    <xsd:sequence>
+      <xsd:element name="UnitPrice" type="UN-TDED:MonetaryAmountAmountType"/>
+      <xsd:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentReferenceType">
+    <xsd:sequence>
+      <xsd:element name="ReferenceID" type="UN-TDED:ReferenceIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductOriginAddressStructuredType">
+    <xsd:sequence>
+      <xsd:element name="City" type="UN-TDED:CityNameTextType" minOccurs="0"/>
+      <xsd:element name="CountrySub-entity" type="UN-TDED:CountrySubdivisionTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="StatisticalCodeType">
+    <xsd:sequence>
+      <xsd:element name="StatisticalCode" type="UN-TDED:GoodsItemCustomsRequiredIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TaxAmountType">
+    <xsd:sequence>
+      <xsd:element name="TaxAmount" type="UN-TDED:MonetaryAmountAmountType" minOccurs="0"/>
+      <xsd:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TaxInformationType">
+    <xsd:sequence>
+      <xsd:element name="TaxRate" type="UN-TDED:TaxOrFeeRateCodeType"/>
+      <xsd:element name="TaxAmount" type="THeEE:TaxAmountType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransportEquipmentType">
+    <xsd:sequence>
+      <xsd:element name="TransportEquipmentID" type="UN-TDED:TransportEquipmentIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

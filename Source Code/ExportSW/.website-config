@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website version="600">
+	<structure template="WebContent/theme/B-01_green.htpl">
+
+
+		<page template="/WebContent/theme/B-01_green.htpl"
+			src="/WebContent/index.jsp" id="3" navroot="true">
+			<title>หน้าแรก</title>
+			<page template="/WebContent/theme/B-01_green.htpl"
+				src="/WebContent/success.jsp" id="7" navigation="false"
+				sitemap="false">
+				<title>Success</title>
+			</page>
+			<page template="/WebContent/theme/B-01_green.htpl"
+				src="/WebContent/error.jsp" id="9" navigation="false"
+				sitemap="false">
+				<title>Error</title>
+			</page>
+			<page template="/WebContent/theme/B-01_green.htpl"
+				src="/WebContent/login.jsp" id="6">
+				<title>เข้าสู่ระบบ</title>
+			</page>
+			<page template="/WebContent/theme/B-01_green.htpl"
+				src="newpage" id="8" servleturl="/ExportSW/PerformLogout.do">
+				<title>ออกจากระบบ</title>
+			</page>
+			<group gid="group2">
+				<title>ข้อมูลผู้ส่งออก</title>
+				<page template="/WebContent/theme/B-01_green.htpl"
+					src="/WebContent/exporter.jsp" id="4"
+					servleturl="/ExportSW/PrepareAddExporter.do">
+					<title>ลงทะเบียนผู้ส่งออก</title>
+				</page>
+				<page template="/WebContent/theme/B-01_green.htpl"
+					src="/WebContent/viewExporter.jsp" id="5"
+					servleturl="/ExportSW/ViewExporter.do">
+					<title>เรียกดูข้อมูลผู้ส่งออก</title>
+				</page>
+			</group>
+			<group gid="group">
+				<title>คำร้อง</title>
+
+
+				<page template="/WebContent/theme/B-01_green.htpl"
+					src="/WebContent/certificateRequest.jsp" author="" status=""
+					style="" icon="" id="1"
+					servleturl="/ExportSW/PrepareCertificateRequest.do">
+					<description></description>
+					<title>ยื่นแบบฟอร์มคำร้อง</title>
+
+				</page>
+				<page template="/WebContent/theme/B-01_green.htpl"
+					src="/WebContent/viewCertificateRequest.jsp" author="" status=""
+					style="" icon="" id="2">
+					<description></description>
+					<title>ตรวจสอบสถานะคำร้อง</title>
+					<page template="/WebContent/theme/B-01_green.htpl"
+						src="/WebContent/certificateRequestDetail.jsp" id="10">
+						<title>certificateRequestDetail.jsp</title>
+					</page>
+				</page>
+			</group>
+
+		</page>
+
+
+
+	</structure>
+</website>

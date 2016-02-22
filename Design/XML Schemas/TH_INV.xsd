@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:THeINV="THeInvoice_0_1" targetNamespace="THeInvoice_0_1" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:TH-TDED="THeDOCS TDED">  
+  <xsd:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xsd:element name="Invoice" type="THeINV:InvoiceType"/>
+  <xsd:complexType name="AdditionalInformationType">
+    <xsd:sequence>
+      <xsd:element name="InformationCode" type="UN-TDED:InformationDetailsCodeType" minOccurs="0"/>
+      <xsd:element name="InformationText" type="UN-TDED:InformationDetailsTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AddressStructuredType">
+    <xsd:sequence>
+      <xsd:element name="Name" type="UN-TDED:PartyNameTextType" minOccurs="0"/>
+      <xsd:element name="Street" type="UN-TDED:PostalDeliveryPointTextType" minOccurs="0"/>
+      <xsd:element name="City" type="UN-TDED:CityNameTextType" minOccurs="0"/>
+      <xsd:element name="CountrySub-entity" type="UN-TDED:CountrySubdivisionTextType" minOccurs="0"/>
+      <xsd:element name="PostalZone" type="UN-TDED:PostalIdentificationIdentifierType" minOccurs="0"/>
+      <xsd:element name="CountryCode" type="UN-TDED:CountryIdentificationIdentifierType" minOccurs="0"/>
+      <xsd:element name="CountryName" type="UN-TDED:CountryNameTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="AnyType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="AuthenticationType">
+    <xsd:sequence>
+      <xsd:element name="DocumentIssue" type="THeINV:DocumentIssueType" minOccurs="0"/>
+      <xsd:element name="Signature" type="THeINV:SignatureType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BuyerAssignedReferenceType">
+    <xsd:sequence>
+      <xsd:element name="BuyerAssignedID" type="THeINV:LineItemBuyerAssignedIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BuyerNameAddressUnstructuredType">
+    <xsd:sequence>
+      <xsd:element name="NameAddressUnstructured" type="UN-TDED:BuyerIdentificationTextType" maxOccurs="5"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BuyerPartyType">
+    <xsd:sequence>
+      <xsd:element name="BuyerID" type="UN-TDED:BuyerIdentificationIdentifierType" minOccurs="0"/>
+      <xsd:element name="TaxReference" type="UN-TDED:PartyTaxIdentifierType" minOccurs="0"/>
+      <xsd:element name="BuyerReference" type="THeINV:BuyerReferenceType" minOccurs="0"/>
+      <xsd:choice>
+        <xsd:element name="AddressStructured" type="THeINV:AddressStructuredType" minOccurs="0"/>
+        <xsd:element name="BuyerNameAddressUnstructured" type="THeINV:BuyerNameAddressUnstructuredType" minOccurs="0"/>
+      </xsd:choice>
+      <xsd:element name="InformationContact" type="THeINV:InformationContactType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BuyerReferenceType">
+    <xsd:sequence>
+      <xsd:element name="ReferenceID" type="UN-TDED:OrderBuyerAssignedIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CommodityCodeType">
+    <xsd:sequence>
+      <xsd:element name="CommodityCode" type="UN-TDED:GoodsItemCustomsRequiredIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CommunicationDetailsType">
+    <xsd:sequence>
+      <xsd:element name="CommunicationNumber" type="UN-TDED:CommunicationAddressIdentifierType"/>
+      <xsd:element name="CommunicationType" type="UN-TDED:CommunicationMediumTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsigneeNameAddressUnstructuredType">
+    <xsd:sequence>
+      <xsd:element name="NameAddressUnstructured" type="UN-TDED:ConsigneeIdentificationTextType" maxOccurs="5"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsigneePartyType">
+    <xsd:sequence>
+      <xsd:element name="ConsigneeID" type="UN-TDED:ConsigneeIdentificationIdentifierType" minOccurs="0"/>
+      <xsd:element name="TaxReference" type="UN-TDED:PartyTaxIdentifierType" minOccurs="0"/>
+      <xsd:element name="ToOrderOfIndicator" type="UN-TDED:YesOrNoIndicatorType" minOccurs="0"/>
+      <xsd:choice>
+        <xsd:element name="AddressStructured" type="THeINV:AddressStructuredType" minOccurs="0"/>
+        <xsd:element name="ConsigneeNameAddressUnstructured" type="THeINV:ConsigneeNameAddressUnstructuredType" minOccurs="0"/>
+      </xsd:choice>
+      <xsd:element name="InformationContact" type="THeINV:InformationContactType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentCubeType">
+    <xsd:sequence>
+      <xsd:element name="Volume" type="UN-TDED:ConsignmentGrossVolumeMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentDetailsType">
+    <xsd:sequence>
+      <xsd:element name="ConsignmentMarksAndNumbers" type="THeINV:ConsignmentMarksAndNumbersType" minOccurs="0"/>
+      <xsd:element name="TransportEquipment" type="THeINV:TransportEquipmentType" minOccurs="0"/>
+      <xsd:element name="CommodityCodeType" type="THeINV:CommodityCodeType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTotals" type="THeINV:ConsignmentTotalsType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentEquipmentQuantityType">
+    <xsd:sequence>
+      <xsd:element name="NumberOfPiecesOfEquipment" type="UN-TDED:TransportEquipmentQuantityType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentGrossWeightType">
+    <xsd:sequence>
+      <xsd:element name="Measure" type="UN-TDED:ConsignmentGrossWeightMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentInformationType">
+    <xsd:sequence>
+      <xsd:element name="UniqueConsignmentReference" type="THeINV:UniqueConsignmentReferenceType" minOccurs="0"/>
+      <xsd:element name="ConsigneeParty" type="THeINV:ConsigneePartyType" minOccurs="0"/>
+      <xsd:element name="FreightForwarderParty" type="THeINV:FreightForwarderPartyType" minOccurs="0"/>
+      <xsd:element name="CountryOfOrigin" type="THeINV:CountryOfOriginType" minOccurs="0"/>
+      <xsd:element name="CountryOfDestination" type="THeINV:CountryOfDestinationType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTransportDetails" type="THeINV:ConsignmentTransportDetailsType" minOccurs="0"/>
+      <xsd:element name="ConsignmentDetails" type="THeINV:ConsignmentDetailsType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentMarksAndNumbersType">
+    <xsd:sequence>
+      <xsd:element name="ShippingMark" type="UN-TDED:ItemShippingMarksTextType" minOccurs="0"/>
+      <xsd:element name="NumberOfPackages" type="UN-TDED:ConsignmentPackageQuantityType" minOccurs="0"/>
+      <xsd:element name="KindOfPackages" type="UN-TDED:ConsignmentPackageTypeTextType" minOccurs="0"/>
+      <xsd:element name="ConsignmentDescription" type="UN-TDED:ConsignmentSummaryDescriptionTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentNetWeightType">
+    <xsd:sequence>
+      <xsd:element name="Measure" type="UN-TDED:NetWeightMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentTotalsType">
+    <xsd:sequence>
+      <xsd:element name="EquipmentQuantity" type="THeINV:ConsignmentEquipmentQuantityType" minOccurs="0"/>
+      <xsd:element name="GrossWeight" type="THeINV:ConsignmentGrossWeightType" minOccurs="0"/>
+      <xsd:element name="NetWeight" type="THeINV:ConsignmentNetWeightType" minOccurs="0"/>
+      <xsd:element name="Cube" type="THeINV:ConsignmentCubeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentTransportDetailsType">
+    <xsd:sequence>
+      <xsd:element name="TransportMeans" type="THeINV:TransportMeansType" minOccurs="0"/>
+      <xsd:element name="TransportMode" type="THeINV:TransportModeType" minOccurs="0"/>
+      <xsd:element name="PortOfLoading" type="THeINV:PortOfLoadingType" minOccurs="0"/>
+      <xsd:element name="PortOfDischarge" type="THeINV:PortOfDischargeType" minOccurs="0"/>
+      <xsd:element name="DeliveryLocation" type="THeINV:DeliveryLocationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CountryOfDestinationType">
+    <xsd:sequence>
+      <xsd:element name="CountryCode" type="UN-TDED:ConsignmentFinalDestinationCountryIdentifierType"/>
+      <xsd:element name="CountryName" type="UN-TDED:ConsignmentFinalDestinationCountryTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CountryOfOriginType">
+    <xsd:sequence>
+      <xsd:element name="CountryCode" type="UN-TDED:OriginCountryIdentificationIdentifierType"/>
+      <xsd:element name="CountryName" type="UN-TDED:OriginCountryNameTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CubeType">
+    <xsd:sequence>
+      <xsd:element name="Volume" type="UN-TDED:ItemGrossVolumeMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="CurrencyType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="DeliveryLocationType">
+    <xsd:sequence>
+      <xsd:element name="DeliveryLocationID" type="UN-TDED:DeliveryLocationIdentifierType" minOccurs="0"/>
+      <xsd:element name="DeliveryLocationName" type="UN-TDED:DeliveryLocationTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DeliveryTermsLocationType">
+    <xsd:complexContent>
+      <xsd:extension base="THeINV:LocationType"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentDeclarationsAndNotesType">
+    <xsd:sequence>
+      <xsd:element name="DeclarationText" type="UN-TDED:DocumentDeclarationTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentDetailsTradeType">
+    <xsd:sequence>
+      <xsd:element name="LineItem" type="THeINV:LineItemType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentHeaderType">
+    <xsd:sequence>
+      <xsd:element name="DocumentReference" type="THeINV:DocumentReferenceType" minOccurs="0"/>
+      <xsd:element name="OrderInformation" type="THeINV:OrderInformationType" minOccurs="0"/>
+      <xsd:element name="ConsignmentInformation" type="THeINV:ConsignmentInformationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentIssueType">
+    <xsd:sequence>
+      <xsd:element name="Place" type="UN-TDED:DocumentIssueLocationTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentReferenceType">
+    <xsd:sequence>
+      <xsd:element name="DocumentType" type="UN-TDED:DocumentNameCodeType"/>
+      <xsd:element name="DocumentName" type="UN-TDED:DocumentNameTextType"/>
+      <xsd:element name="DocumentNumber" type="UN-TDED:DocumentIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentSummaryType">
+    <xsd:sequence>
+      <xsd:element name="DocumentDeclarations" type="THeINV:DocumentDeclarationsAndNotesType" minOccurs="0"/>
+      <xsd:element name="Authentication" type="THeINV:AuthenticationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ForwarderNameAddressUnstructuredType">
+    <xsd:sequence>
+      <xsd:element name="NameAddressUnstructured" type="UN-TDED:FreightForwarderIdentificationTextType" maxOccurs="5"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FreightForwarderPartyType">
+    <xsd:sequence>
+      <xsd:element name="ForwarderID" type="UN-TDED:FreightForwarderIdentificationIdentifierType" minOccurs="0"/>
+      <xsd:element name="TaxReference" type="UN-TDED:PartyTaxIdentifierType" minOccurs="0"/>
+      <xsd:choice>
+        <xsd:element name="AddressStructured" type="THeINV:AddressStructuredType" minOccurs="0"/>
+        <xsd:element name="ForwarderNameAddressUnstructured" type="THeINV:ForwarderNameAddressUnstructuredType" minOccurs="0"/>
+      </xsd:choice>
+      <xsd:element name="InformationContact" type="THeINV:InformationContactType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InformationContactType">
+    <xsd:sequence>
+      <xsd:element name="ContactName" type="UN-TDED:InformationContactTextType" minOccurs="0"/>
+      <xsd:element name="CommunicationDetails" type="THeINV:CommunicationDetailsType" minOccurs="0" maxOccurs="5"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvoiceIssueDateType">
+    <xsd:sequence>
+      <xsd:element name="DateTime" type="UN-TDED:InvoiceIssueDateTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvoiceReferenceType">
+    <xsd:sequence>
+      <xsd:element name="InvoiceNumber" type="UN-TDED:InvoiceDocumentIdentificationIdentifierType"/>
+      <xsd:element name="ReferenceDate" type="UN-TDED:DateDateDateTimeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvoiceSummaryType">
+    <xsd:sequence>
+      <xsd:element name="InvoiceTotals" type="THeINV:InvoiceTotalsType" minOccurs="0"/>
+      <xsd:element name="InvoiceIssueDate" type="THeINV:InvoiceIssueDateType" minOccurs="0"/>
+      <xsd:element name="DocumentSummary" type="THeINV:DocumentSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvoiceTotalsType">
+    <xsd:sequence>
+      <xsd:element name="TotalValue" type="UN-TDED:InvoiceAmountType"/>
+      <xsd:element name="CurrencyCode" type="THeINV:CurrencyType" minOccurs="0"/>
+      <xsd:element name="DiscountValue" type="UN-TDED:DiscountAmountType" minOccurs="0"/>
+      <xsd:element name="DeliveryCharge" type="UN-TDED:ServiceChargeAmountType" minOccurs="0"/>
+      <xsd:element name="MonetaryAmount" type="THeINV:MonetaryAmountType" minOccurs="0" maxOccurs="2"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvoiceType">
+    <xsd:sequence>
+      <xsd:element name="DocumentHeader" type="THeINV:DocumentHeaderType" minOccurs="0"/>
+      <xsd:element name="DocumentDetailsTrade" type="THeINV:DocumentDetailsTradeType" minOccurs="0"/>
+      <xsd:element name="InvoiceSummary" type="THeINV:InvoiceSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemAmountType">
+    <xsd:sequence>
+      <xsd:element name="ItemAmount" type="UN-TDED:ItemAmountType" minOccurs="0"/>
+      <xsd:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemIdentificationType">
+    <xsd:sequence>
+      <xsd:element name="ProductCode" type="UN-TDED:LineItemIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemQuantityType">
+    <xsd:sequence>
+      <xsd:element name="Quantity" type="UN-TDED:QuantityQuantityType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemUnitPriceType">
+    <xsd:sequence>
+      <xsd:element name="UnitPrice" type="THeINV:AnyType"/>
+      <xsd:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+      <xsd:element name="UnitPriceBasis" type="UN-TDED:UnitPriceBasisQuantityType" minOccurs="0"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemValuesType">
+    <xsd:sequence>
+      <xsd:element name="ItemQuantity" type="THeINV:ItemQuantityType" minOccurs="0"/>
+      <xsd:element name="ItemAmount" type="THeINV:ItemAmountType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="LineItemBuyerAssignedIdentificationIdentifierType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="LineItemGrossWeightType">
+    <xsd:sequence>
+      <xsd:element name="Measure" type="UN-TDED:LineItemGrossWeightMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LineItemMeasurementsType">
+    <xsd:sequence>
+      <xsd:element name="GrossWeight" type="THeINV:LineItemGrossWeightType" minOccurs="0"/>
+      <xsd:element name="NetWeight" type="THeINV:LineItemNetWeightType" minOccurs="0"/>
+      <xsd:element name="Cube" type="THeINV:CubeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LineItemNetWeightType">
+    <xsd:sequence>
+      <xsd:element name="Measure" type="UN-TDED:LineItemNetWeightMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LineItemReferencesType">
+    <xsd:sequence>
+      <xsd:element name="BuyerAssignedReference" type="THeINV:BuyerAssignedReferenceType" minOccurs="0"/>
+      <xsd:element name="SellerAssignedReference" type="THeINV:SellerAssignedReferenceType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="LineItemSellerAssignedIdentificationIdentifierType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="LineItemType">
+    <xsd:sequence>
+      <xsd:element name="ItemID" type="UN-TDED:LineItemSequenceIdentifierType" minOccurs="0"/>
+      <xsd:element name="ItemDescription" type="UN-TDED:LineItemTextType" minOccurs="0"/>
+      <xsd:element name="NumberOfPackages" type="UN-TDED:ItemPackageQuantityType" minOccurs="0"/>
+      <xsd:element name="KindOfPackages" type="UN-TDED:ItemPackageTypeTextType" minOccurs="0"/>
+      <xsd:element name="AdditionalInformation" type="THeINV:AdditionalInformationType" minOccurs="0"/>
+      <xsd:element name="LineItemReferences" type="THeINV:LineItemReferencesType" minOccurs="0"/>
+      <xsd:element name="CountryOfOrigin" type="THeINV:CountryOfOriginType" minOccurs="0"/>
+      <xsd:element name="ItemValues" type="THeINV:ItemValuesType" minOccurs="0"/>
+      <xsd:element name="LineItemMeasurements" type="THeINV:LineItemMeasurementsType" minOccurs="0"/>
+      <xsd:element name="ProductInformation" type="THeINV:ProductInformationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocationType">
+    <xsd:sequence>
+      <xsd:element name="LocationName" type="UN-TDED:LocationNameTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MonetaryAmountType">
+    <xsd:sequence>
+      <xsd:element name="MonetaryValue" type="UN-TDED:MonetaryAmountAmountType"/>
+      <xsd:element name="MonetaryType" type="UN-TDED:MonetaryAmountTypeCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OrderInformationType">
+    <xsd:sequence>
+      <xsd:element name="InvoiceReference" type="THeINV:InvoiceReferenceType" minOccurs="0"/>
+      <xsd:element name="SellerReference" type="THeINV:SellerReferenceType" minOccurs="0"/>
+      <xsd:element name="BuyerReference" type="THeINV:BuyerReferenceType" minOccurs="0"/>
+      <xsd:element name="OtherReference" type="THeINV:OtherReferenceType" minOccurs="0"/>
+      <xsd:element name="SellerParty" type="THeINV:SellerPartyType" minOccurs="0"/>
+      <xsd:element name="BuyerParty" type="THeINV:BuyerPartyType" minOccurs="0"/>
+      <xsd:element name="TermsOfDelivery" type="THeINV:TermsOfDeliveryType" minOccurs="0"/>
+      <xsd:element name="TermsOfPayment" type="THeINV:TermsOfPaymentType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OtherReferenceType">
+    <xsd:sequence>
+      <xsd:element name="ReferenceID" type="UN-TDED:ReferenceIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PortOfDischargeType">
+    <xsd:sequence>
+      <xsd:element name="DischargeLocationID" type="UN-TDED:ConsignmentDischargeLocationIdentifierType" minOccurs="0"/>
+      <xsd:element name="DischargeLocationName" type="UN-TDED:ConsignmentDischargeLocationTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PortOfLoadingType">
+    <xsd:sequence>
+      <xsd:element name="LoadingLocationID" type="UN-TDED:ConsignmentLoadingLocationIdentifierType" minOccurs="0"/>
+      <xsd:element name="LoadingLocationName" type="UN-TDED:ConsignmentLoadingLocationTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductInformationType">
+    <xsd:sequence>
+      <xsd:element name="ItemIdentification" type="THeINV:ItemIdentificationType" minOccurs="0"/>
+      <xsd:element name="ItemUnitPrice" type="THeINV:ItemUnitPriceType" minOccurs="0"/>
+      <xsd:element name="CommodityCodeType" type="THeINV:CommodityCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SellerAssignedReferenceType">
+    <xsd:sequence>
+      <xsd:element name="SellerAssignedID" type="THeINV:LineItemSellerAssignedIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SellerNameAddressUnstructuredType">
+    <xsd:sequence>
+      <xsd:element name="NameAddressUnstructured" type="THeINV:AnyType" maxOccurs="5"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SellerPartyType">
+    <xsd:sequence>
+      <xsd:element name="SellerID" type="THeINV:AnyType" minOccurs="0"/>
+      <xsd:element name="TaxReference" type="UN-TDED:PartyTaxIdentifierType" minOccurs="0"/>
+      <xsd:choice>
+        <xsd:element name="AddressStructured" type="THeINV:AddressStructuredType" minOccurs="0"/>
+        <xsd:element name="SellerNameAddressUnstructured" type="THeINV:SellerNameAddressUnstructuredType" minOccurs="0"/>
+      </xsd:choice>
+      <xsd:element name="InformationContact" type="THeINV:InformationContactType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SellerReferenceType">
+    <xsd:sequence>
+      <xsd:element name="ReferenceID" type="UN-TDED:OrderAcknowledgementDocumentIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SignatureType">
+    <xsd:sequence>
+      <xsd:element name="AuthenticationCode" type="UN-TDED:DocumentAuthenticationCodeType" minOccurs="0"/>
+      <xsd:element name="AuthenticationText" type="UN-TDED:DocumentAuthenticationTextType" minOccurs="0"/>
+      <xsd:element name="DigitalSignatureText" type="TH-TDED:DigitalSignatureTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TermsOfDeliveryType">
+    <xsd:sequence>
+      <xsd:element name="DeliveryTermsCoded" type="UN-TDED:TradeTermDescriptionCodeType" minOccurs="0"/>
+      <xsd:element name="DeliveryTermsDescription" type="UN-TDED:TradeTermDescriptionTextType" minOccurs="0"/>
+      <xsd:element name="DeliveryTermsFunctionCoded" type="UN-TDED:TradeTermFunctionCodeType" minOccurs="0"/>
+      <xsd:element name="DeliveryTermLocation" type="THeINV:DeliveryTermsLocationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TermsOfPaymentType">
+    <xsd:sequence>
+      <xsd:element name="PaymentTermsCode" type="UN-TDED:PaymentTermCodeType" minOccurs="0"/>
+      <xsd:element name="PaymentTermsText" type="UN-TDED:PaymentTermTextType" minOccurs="0"/>
+      <xsd:element name="PaymentCurrency" type="UN-TDED:PaymentCurrencyIdentifierType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransportEquipmentType">
+    <xsd:sequence>
+      <xsd:element name="TransportEquipmentID" type="UN-TDED:TransportEquipmentIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransportMeansType">
+    <xsd:sequence>
+      <xsd:element name="TransportMeansCode" type="UN-TDED:TransportMeansTypeCodeType" minOccurs="0"/>
+      <xsd:element name="TransportMeansText" type="UN-TDED:TransportMeansTypeTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransportModeType">
+    <xsd:sequence>
+      <xsd:element name="TransportModeCode" type="UN-TDED:TransportModeCodeType" minOccurs="0"/>
+      <xsd:element name="TransportModeText" type="UN-TDED:TransportModeTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UniqueConsignmentReferenceType">
+    <xsd:sequence>
+      <xsd:element name="UCR" type="UN-TDED:ConsignmentIdentificationIdentifierType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,67 @@
+BODY
+{
+    BACKGROUND-COLOR: #FFFFFF;
+    COLOR: #333366;
+    FONT-FAMILY: 'MS Sans Serif'
+}
+H1
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'MS Sans Serif';
+    TEXT-TRANSFORM: capitalize
+}
+H2
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'MS Sans Serif';
+    TEXT-TRANSFORM: capitalize
+}
+H3
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'MS Sans Serif';
+    TEXT-TRANSFORM: capitalize
+}
+
+H4
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'MS Sans Serif';
+    TEXT-TRANSFORM: capitalize
+}
+
+H5
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'MS Sans Serif';
+    TEXT-TRANSFORM: capitalize
+}
+H6
+{
+    COLOR: #6666CC;
+    FONT-FAMILY: 'MS Sans Serif';
+    TEXT-TRANSFORM: capitalize
+}
+TH {
+ color: #6060cc
+}
+
+.success_message {
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: blue
+}
+
+.error_message {
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: red
+}
+
+.body {
+	font-family: 'MS Sans Serif';
+	font-size: 10pt;
+}
+

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by TEAM (RENEGADE) -->
+<xs:schema targetNamespace="http://www.ku.ac.th/singlewindow/Schema/ShipmentCertificateRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:TH-TDED="THeDOCS TDED" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns="http://www.ku.ac.th/singlewindow/Schema/ShipmentCertificateRequest" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xs:element name="CertificateRequest" type="CertificateRequestType"/>
+  <xs:complexType name="AuthorizedPersonType">
+    <xs:sequence>
+      <xs:element name="AuthorizedPersonID" type="xs:string" minOccurs="0"/>
+      <xs:element name="AuthorizedPersonName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AnimalExportInformationType">
+    <xs:sequence>
+      <xs:element name="LiveAnimalQuantity" type="ItemQuantityType" minOccurs="0"/>
+      <xs:element name="AnimalRemainsQuantity" type="ItemQuantityType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CertificateRequestHeaderType">
+    <xs:sequence>
+      <xs:element name="CertificateRequestID" type="UN-TDED:DocumentTypeIdentifierType"/>
+      <xs:element name="CertificateType" type="CertificateTypeType" maxOccurs="99"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CertificateRequestInformationType">
+    <xs:sequence>
+      <xs:element name="AuthorizedPerson" type="AuthorizedPersonType" minOccurs="0"/>
+      <xs:element name="ProductOrigin" type="ProductOriginType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CertificateTypeType">
+    <xs:sequence>
+      <xs:element name="CertificateTypeID" type="UN-TDED:DocumentTypeIdentifierType"/>
+      <xs:element name="CertificateTypeName" type="UN-TDED:DocumentNameTextType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConsignmentInformationType">
+    <xs:sequence>
+      <xs:element name="ConsigneeParty" type="TH-TDED:ConsigneePartyType" minOccurs="0"/>
+      <xs:element name="CountryOfOrigin" type="TH-TDED:CountryOfOriginType" minOccurs="0"/>
+      <xs:element name="CountryOfDestination" type="TH-TDED:CountryOfDestinationType" minOccurs="0"/>
+      <xs:element name="ConsignmentTransportDetails" type="TH-TDED:ConsignmentTransportDetailsType" minOccurs="0"/>
+      <xs:element name="FreightForwarderParty" type="TH-TDED:FreightForwarderPartyType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CubeType">
+    <xs:sequence>
+      <xs:element name="Volume" type="UN-TDED:ItemGrossVolumeMeasureType"/>
+      <xs:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CertificateRequestType">
+    <xs:sequence>
+      <xs:element name="CertificateRequestHeader" type="CertificateRequestHeaderType"/>
+      <xs:element name="CertificateRequestInformation" type="CertificateRequestInformationType"/>
+      <xs:element name="ExporterInformation" type="ExporterInformationType"/>
+      <xs:element name="ConsignmentInformation" type="ConsignmentInformationType"/>
+      <xs:element name="InvoiceInformation" type="InvoiceInformationType"/>
+      <xs:element name="HalalInformation" type="HalalInformationType" minOccurs="0"/>
+      <xs:element name="HealthCertificateInformation" type="HealthCertificateInformationType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExporterInformationType">
+    <xs:sequence>
+      <xs:element name="ExporterID" type="TH-TDED:ThaiPartyIdentifierType"/>
+      <xs:element name="BirthDate" type="TH-TDED:PersonBirthDateDateTimeType"/>
+      <xs:element name="AddressStructured" type="TH-TDED:AddressStructuredType" minOccurs="0"/>
+      <xs:element name="FactoryAddressStructured" type="TH-TDED:AddressStructuredType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HalalInformationType">
+    <xs:sequence>
+      <xs:element name="ProductDescription" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xs:element name="ManufacturerParty" type="TH-TDED:ManufacturerPartyType" minOccurs="0"/>
+      <xs:element name="HalalNumber" type="UN-TDED:GoodsItemTypeCodeType"/>
+      <xs:element name="HalalCompanyCode" type="TH-TDED:HalalCompanyCodeType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HealthCertificateInformationType">
+    <xs:sequence>
+      <xs:element name="ScientificName" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xs:element name="ItemDescription" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xs:element name="CodeNumber" type="UN-TDED:GoodsItemTypeCodeType" minOccurs="0"/>
+      <xs:element name="RequiredTemperature" type="RequiredTemperatureType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InvoiceInformationType">
+    <xs:sequence>
+      <xs:element name="InvoiceReference" type="InvoiceReferenceType"/>
+      <xs:element name="LineItem" type="LineItemType" maxOccurs="99"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InvoiceReferenceType">
+    <xs:sequence>
+      <xs:element name="InvoiceNumber" type="UN-TDED:InvoiceDocumentIdentificationIdentifierType"/>
+      <xs:element name="ReferenceDate" type="UN-TDED:DateDateDateTimeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemAmountType">
+    <xs:sequence>
+      <xs:element name="ItemAmount" type="UN-TDED:ItemAmountType" minOccurs="0"/>
+      <xs:element name="CurrencyCode" type="UN-TDED:CurrencyTypeCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemQuantityType">
+    <xs:sequence>
+      <xs:element name="Quantity" type="UN-TDED:QuantityQuantityType"/>
+      <xs:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemValuesType">
+    <xs:sequence>
+      <xs:element name="ItemQuantity" type="ItemQuantityType" minOccurs="0"/>
+      <xs:element name="ItemAmount" type="ItemAmountType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineItemGrossWeightType">
+    <xs:sequence>
+      <xs:element name="Measure" type="UN-TDED:LineItemGrossWeightMeasureType"/>
+      <xs:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineItemMeasurementsType">
+    <xs:sequence>
+      <xs:element name="GrossWeight" type="LineItemGrossWeightType" minOccurs="0"/>
+      <xs:element name="NetWeight" type="LineItemNetWeightType" minOccurs="0"/>
+      <xs:element name="Cube" type="CubeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineItemNetWeightType">
+    <xs:sequence>
+      <xs:element name="Measure" type="UN-TDED:LineItemNetWeightMeasureType"/>
+      <xs:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineItemType">
+    <xs:sequence>
+      <xs:element name="ItemID" type="UN-TDED:LineItemSequenceIdentifierType" minOccurs="0"/>
+      <xs:element name="ItemDescription" type="UN-TDED:LineItemTextType" minOccurs="0"/>
+      <xs:element name="NumberOfPackages" type="UN-TDED:ItemPackageQuantityType" minOccurs="0"/>
+      <xs:element name="KindOfPackages" type="UN-TDED:ItemPackageTypeTextType" minOccurs="0"/>
+      <xs:element name="ItemValues" type="ItemValuesType" minOccurs="0"/>
+      <xs:element name="LineItemMeasurements" type="LineItemMeasurementsType" minOccurs="0"/>
+      <xs:element name="CommodityCodeType" type="TH-TDED:CommodityCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductOriginType">
+    <xs:sequence>
+      <xs:element name="OriginDistrict" type="TH-TDED:DistrictType" minOccurs="0"/>
+      <xs:element name="OriginProvince" type="TH-TDED:ProvinceType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequiredTemperatureType">
+    <xs:sequence>
+      <xs:element name="StorageTemperature" type="StorageTemperatureType" minOccurs="0"/>
+      <xs:element name="TransportTemperature" type="TransportTemperatureType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StorageTemperatureType">
+    <xs:sequence>
+      <xs:element name="StorageTemperatureMeasure" type="UN-TDED:StorageTemperatureMeasureType" minOccurs="0"/>
+      <xs:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransportTemperatureType">
+    <xs:sequence>
+      <xs:element name="TransportTemperatureMeasure" type="UN-TDED:TransportTemperatureMeasureType" minOccurs="0"/>
+      <xs:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

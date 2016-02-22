@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="governmentapp.domain" default-access="field">
+
+	<!--  Common Data Elements -->
+	<class name="Province" table="province">
+		<cache usage="read-only"/>
+		<id name="code" column="province_code">
+			<generator class="assigned"/>
+		</id>
+		<property name="name" column="province_name"/>
+	</class>
+
+	<class name="RequestStatus" table="request_status">
+		<cache usage="read-only"/>
+		<id name="code" column="status_code">
+			<generator class="assigned"/>
+		</id>
+		<property name="description" column="description"/>
+	</class>
+
+	<class name="CertificateRequest" table="certificate_request">
+		<cache usage="read-write"/>
+		<id name="id" column="id">
+			<generator class="increment"/>
+		</id>
+		<property name="exporterId" column="exporter_id"/>
+		<property name="exporterName" column="exporter_name"/>
+		<property name="certificateTypeId" column="certificate_type_id"/>
+		<property name="certificateTypeName" column="certificate_type_name"/>
+		<property name="statusCode" column="status_code"/>
+		<many-to-one name="statusLink" column="status_code" insert="false" update="false"/>
+		<property name="requestDate" column="request_date"/>
+		<property name="issueDate" column="issue_date"/>
+		<property name="expiryDate" column="expire_date"/>
+		<property name="issueBy" column="issue_by"/>
+		<property name="signature" column="signature"/>
+	</class>
+
+	<class name="ExporterCertificateRequestDetail" table="exporter_certificate_request_detail">
+		<cache usage="read-write"/>
+		<id name="id" column="id">
+			<generator class="assigned"/>
+		</id>
+		<property name="exporterAddressName" column="exporter_address_name"/>
+		<property name="exporterAddressStreet" column="exporter_address_street"/>
+		<property name="exporterAddressCity" column="exporter_address_city"/>
+		<property name="exporterAddressProvince" column="exporter_address_province"/>
+		<many-to-one name="exporterAddressProvinceLink" column="exporter_address_province" insert="false" update="false"/>
+		<property name="exporterAddressPostalZone" column="exporter_address_postal_zone"/>
+		<property name="exporterAddressTelephone" column="exporter_address_telephone"/>
+		<property name="exporterAddressCountry" column="exporter_address_country"/>
+		<property name="factoryAddressName" column="factory_address_name"/>
+		<property name="factoryAddressStreet" column="factory_address_street"/>
+		<property name="factoryAddressCity" column="factory_address_city"/>
+		<property name="factoryAddressProvince" column="factory_address_province"/>
+		<many-to-one name="factoryAddressProvinceLink" column="factory_address_province" insert="false" update="false"/>
+		<property name="factoryAddressPostalZone" column="factory_address_postal_zone"/>
+		<property name="factoryAddressTelephone" column="factory_address_telephone"/>
+		<property name="factoryAddressCountry" column="factory_address_country"/>
+	</class>
+
+	<class name="ShipmentCertificateRequest" table="shipment_certificate_request">
+		<id name="id" column="id">
+			<generator class="increment"/>
+		</id>
+		<property name="exporterId" column="exporter_id"/>
+		<property name="exporterName" column="exporter_name"/>
+		<property name="certificateRequestId" column="certificate_request_id"/>
+		<property name="certificateTypeId" column="certificate_type_id"/>
+		<property name="certificateTypeName" column="certificate_type_name"/>
+		<property name="statusCode" column="status_code"/>
+		<many-to-one name="statusLink" column="status_code" insert="false" update="false"/>
+		<property name="requestDate" column="request_date"/>
+		<property name="issueDate" column="issue_date"/>
+		<property name="expiryDate" column="expire_date"/>
+		<property name="issueBy" column="issue_by"/>
+		<property name="signature" column="signature"/>
+	</class>
+
+	<class name="ShipmentCertificateRequestDetail" table="shipment_certificate_request_detail">
+		<id name="id" column="id">
+			<generator class="assigned"/>
+		</id>
+		<property name="exporterAddressName" column="exporter_address_name"/>
+		<property name="exporterAddressStreet" column="exporter_address_street"/>
+		<property name="exporterAddressCity" column="exporter_address_city"/>
+		<property name="exporterAddressProvince" column="exporter_address_province"/>
+		<many-to-one name="exporterAddressProvinceLink" column="exporter_address_province" insert="false" update="false"/>
+		<property name="exporterAddressPostalZone" column="exporter_address_postal_zone"/>
+		<property name="exporterAddressTelephone" column="exporter_address_telephone"/>
+		<property name="exporterAddressCountry" column="exporter_address_country"/>
+		<property name="factoryAddressName" column="factory_address_name"/>
+		<property name="factoryAddressStreet" column="factory_address_street"/>
+		<property name="factoryAddressCity" column="factory_address_city"/>
+		<property name="factoryAddressProvince" column="factory_address_province"/>
+		<many-to-one name="factoryAddressProvinceLink" column="factory_address_province" insert="false" update="false"/>
+		<property name="factoryAddressPostalZone" column="factory_address_postal_zone"/>
+		<property name="factoryAddressTelephone" column="factory_address_telephone"/>
+		<property name="factoryAddressCountry" column="factory_address_country"/>
+
+		<property name="proxyId" column="proxy_id"/>
+		<property name="proxyName" column="proxy_name"/>
+		<property name="destinationCountry" column="destination_country"/>
+		<property name="destinationCountryCode" column="destination_country_code"/>
+		<property name="invoiceDate" column="invoice_date"/>
+		<property name="invoiceNo" column="invoice_no"/>
+		<property name="shipmentDate" column="shipment_date"/>
+		<property name="transportMeansJourneyId" column="transport_means_journey_id"/>
+		<property name="transportMode" column="transport_mode"/>
+		<property name="transportModeCode" column="transport_mode_code"/>
+		<property name="dischargeLocation" column="discharge_location"/>
+		<property name="dischargeLocationCode" column="discharge_location_code"/>
+		<property name="loadingLocation" column="loading_location"/>
+		<property name="loadingLocationCode" column="loading_location_code"/>
+		<property name="consigneeName" column="consignee_name"/>
+		<property name="consigneeAddress" column="consignee_address"/>
+		<property name="dispatcherName" column="dispatcher_name"/>
+		<property name="dispatcherAddress" column="dispatcher_address"/>
+		<property name="packageQuantity" column="package_quantity"/>
+		<property name="packageType" column="package_type"/>
+
+		<property name="productDescription" column="product_description"/>
+		<property name="commodityCode" column="commodity_code"/>
+		<property name="productAmount" column="product_amount"/>
+		<property name="productAmountUom" column="product_amount_uom"/>
+		<property name="productValue" column="product_value"/>
+		<property name="productCurrency" column="product_currency"/>
+
+		<property name="halalProductDescription" column="halal_product_description"/>
+		<property name="manufacturer" column="manufacturer"/>
+		<property name="halalNo" column="halal_no"/>
+		<property name="halalCompanyCode" column="halal_company_code"/>
+
+		<property name="species" column="species"/>
+		<property name="productPresentation" column="product_presentation"/>
+		<property name="codeNumber" column="code_number"/>
+		<property name="storageTemperature" column="storage_temperature"/>
+		<property name="storageTemperatureUom" column="storage_temperature_uom"/>
+		<property name="transportTemperature" column="transport_temperature"/>
+		<property name="transportTemperatureUom" column="transport_temperature_uom"/>
+
+		<property name="productOriginDistrict" column="product_origin_district"/>
+		<property name="productOriginProvince" column="product_origin_province"/>
+		<many-to-one name="productOriginProvinceLink" column="product_origin_province" insert="false" update="false"/>
+
+
+	</class>
+
+
+</hibernate-mapping>

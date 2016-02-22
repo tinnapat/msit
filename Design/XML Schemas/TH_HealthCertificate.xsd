@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="THeHealthCertificate_0_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:TH-TDED="THeDOCS TDED" xmlns:THeHC="THeHealthCertificate_0_1">
+  <xsd:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xsd:element name="HealthCertificate" type="THeHC:HealthCertificateType"/>
+  <xsd:complexType name="ConsignmentInformationType">
+    <xsd:sequence>
+      <xsd:element name="ConsigneeParty" type="TH-TDED:ConsigneePartyType" minOccurs="0"/>
+      <xsd:element name="ConsignorParty" type="TH-TDED:ConsignorPartyType" minOccurs="0"/>
+      <xsd:element name="CountryOfDestination" type="TH-TDED:CountryOfDestinationType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTransportDetails" type="THeHC:ConsignmentTransportDetailsType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentTransportDetailsType">
+    <xsd:sequence>
+      <xsd:element name="TransportMeans" type="TH-TDED:TransportMeansType" minOccurs="0"/>
+      <xsd:element name="PortOfLoading" type="THeHC:PortOfLoadingType" minOccurs="0"/>
+      <xsd:element name="DeliveryLocation" type="THeHC:DeliveryLocationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DeliveryLocationType">
+    <xsd:sequence>
+      <xsd:element name="DeliveryLocationID" type="UN-TDED:DeliveryLocationIdentifierType" minOccurs="0"/>
+      <xsd:element name="DeliveryLocationName" type="UN-TDED:DeliveryLocationTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemPackagingType">
+    <xsd:sequence>
+      <xsd:element name="ShippingMark" type="UN-TDED:ItemShippingMarksTextType" minOccurs="0"/>
+      <xsd:element name="NumberOfPackages" type="UN-TDED:PackageQuantityType"/>
+      <xsd:element name="KindOfPackages" type="UN-TDED:PackageTypeTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemType">
+    <xsd:sequence>
+      <xsd:element name="ScientificName" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xsd:element name="ItemDescription" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xsd:element name="CodeNumber" type="UN-TDED:GoodsItemTypeCodeType" minOccurs="0"/>
+      <xsd:element name="GoodsItemPackaging" type="THeHC:GoodsItemPackagingType" maxOccurs="99"/>
+      <xsd:element name="ItemValues" type="THeHC:ItemValuesType" minOccurs="0"/>
+      <xsd:element name="RequiredTemperature" type="THeHC:RequiredTemperatureType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HealthCertificateType">
+    <xsd:sequence>
+      <xsd:element name="DocumentHeader" type="TH-TDED:DocumentHeaderType" minOccurs="0"/>
+      <xsd:element name="ConsignmentInformation" type="THeHC:ConsignmentInformationType" minOccurs="0"/>
+      <xsd:element name="GoodsItem" type="THeHC:GoodsItemType" minOccurs="0"/>
+      <xsd:element name="DocumentSummary" type="TH-TDED:DocumentSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemQuantityType">
+    <xsd:sequence>
+      <xsd:element name="Quantity" type="UN-TDED:QuantityQuantityType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemValuesType">
+    <xsd:sequence>
+      <xsd:element name="ItemQuantity" type="THeHC:ItemQuantityType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PortOfLoadingType">
+    <xsd:sequence>
+      <xsd:element name="LoadingLocationID" type="UN-TDED:ConsignmentLoadingLocationIdentifierType" minOccurs="0"/>
+      <xsd:element name="LoadingLocationName" type="UN-TDED:ConsignmentLoadingLocationTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RequiredTemperatureType">
+    <xsd:sequence>
+      <xsd:element name="StorageTemperature" type="THeHC:StorageTemperatureType" minOccurs="0"/>
+      <xsd:element name="TransportTemperature" type="THeHC:TransportTemperatureType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="StorageTemperatureType">
+    <xsd:sequence>
+      <xsd:element name="StorageTemperatureMeasure" type="UN-TDED:StorageTemperatureMeasureType" minOccurs="0"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransportTemperatureType">
+    <xsd:sequence>
+      <xsd:element name="TransportTemperatureMeasure" type="UN-TDED:TransportTemperatureMeasureType" minOccurs="0"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

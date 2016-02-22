@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    
+<tiles-definitions>
+    
+    <!-- Definition description  -->
+    <definition name="main.definition.menu" path="/templates/main.jsp">
+        <put name="header" value="/templates/header.jsp"/>
+        <put name="menu" value="/templates/menu.jsp"/>
+        <put name="body" value="/welcome.jsp"/>
+        <put name="title" value=""/>
+    </definition>
+    
+    <!-- Global -->
+    <definition name="/error.jsp" extends="main.definition.menu">
+        <put name="body" value="/error.jsp"/>
+    </definition>
+    
+    <definition name="/certificateRequest.jsp" extends="main.definition.menu">
+        <put name="body" value="/certificateRequest.jsp"/>
+    </definition>
+    
+</tiles-definitions>  

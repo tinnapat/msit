@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.export.domain" default-access="field">
+
+	<!--  Common Data Elements -->
+	<class name="Province" table="province">
+		<id name="code" column="province_code">
+			<generator class="assigned"/>
+		</id>
+		<property name="name" column="province_name"/>
+	</class>
+
+	<class name="Authority" table="authority">
+		<id name="code" column="code">
+			<generator class="assigned"/>
+		</id>
+		<property name="name" column="name"/>
+		<property name="createDate" column="create_datetime"/>
+	</class>
+
+	<class name="Country" table="country">
+		<id name="id" column="Key">
+			<generator class="native"/>
+		</id>
+		<property name="countryCode" column="Alpha2Code"/>
+		<property name="countryName" column="CountryName"/>
+	</class>
+
+	<class name="Currency" table="currency">
+		<id name="currencyCodeA" column="CurrencyCodeA">
+			<generator class="assigned"/>
+		</id>
+		<property name="currencyCodeN" column="CurrencyCodeN"/>
+		<property name="minorUnit" column="MinorUnit"/>
+		<property name="currencyName" column="CurrencyName"/>
+	</class>
+
+	<class name="RequestStatus" table="request_status">
+		<id name="code" column="status_code">
+			<generator class="assigned"/>
+		</id>
+		<property name="description" column="description"/>
+	</class>
+
+	<class name="TransportMode" table="transport_mode">
+		<id name="code" column="code">
+			<generator class="assigned"/>
+		</id>
+		<property name="name" column="name"/>
+		<property name="thaiName" column="name_thai"/>
+		<property name="description" column="description"/>
+	</class>
+
+	<class name="Location" table="location">
+		<id name="locationCode" column="LocationCode">
+			<generator class="assigned"/>
+		</id>
+		<property name="countryCode" column="Country"/>
+		<property name="location" column="Location"/>
+		<property name="locationName" column="Name"/>
+		<property name="status" column="Status"/>
+		<property name="function" column="Function"/>
+		<property name="coordinates" column="Coordinates"/>
+		<property name="remarks" column="Remarks"/>
+	</class>
+
+	<class name="Address" table="exporter_address" entity-name="ExporterAddress">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<many-to-one name="exporter" column="exporter_id"/>
+		<property name="name" column="name"/>
+		<property name="street" column="street"/>
+		<property name="city" column="city"/>
+		<property name="countrySubEntity" column="country_sub_entity"/>
+		<many-to-one name="countrySubEntityLink" column="country_sub_entity" insert="false" update="false"/>
+		<property name="postalZone" column="postal_zone"/>
+		<property name="telephone" column="telephone"/>
+	</class>
+
+	<class name="Address" table="factory_address" entity-name="FactoryAddress">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<many-to-one name="exporter" column="exporter_id"/>
+		<property name="name" column="name"/>
+		<property name="street" column="street"/>
+		<property name="city" column="city"/>
+		<property name="countrySubEntity" column="country_sub_entity"/>
+		<many-to-one name="countrySubEntityLink" column="country_sub_entity" insert="false" update="false"/>
+		<property name="postalZone" column="postal_zone"/>
+		<property name="telephone" column="telephone"/>
+	</class>
+
+	<class name="CertificateType" table="certificate_type">
+		<cache usage="read-only"/>
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="name" column="name"/>
+		<property name="certificateType" column="type"/>
+		<property name="description" column="description"/>
+		<many-to-one name="authority" column="authority_code"/>
+		<property name="activeFlag" column="active_flag"/>
+		<property name="createDate" column="create_datetime"/>
+	</class>
+
+	<class name="Exporter" table="exporter">
+		<id name="exporterId" column="exporter_id">
+			<generator class="assigned"/>
+		</id>
+		<timestamp name="modifyDate" column="modify_datetime"/>
+		<property name="password" column="password"/>
+		<property name="name" column="name"/>
+		<property name="dateOfBirth" column="birthdate"/>
+		<one-to-one name="exporterAddress" property-ref="exporter" entity-name="ExporterAddress"/>
+		<one-to-one name="factoryAddress" property-ref="exporter" entity-name="FactoryAddress"/>
+		<property name="createDate" column="create_datetime"/>
+	</class>
+
+	<class name="ExporterCertificateStatus" table="exporter_certificate_status">
+		<id name="id" column="id">
+			<generator class="native"/>
+		</id>
+		<timestamp name="modifyDate" column="modify_datetime"/>
+		<property name="exporterId" column="exporter_id"/>
+		<many-to-one name="exporterLink" column="exporter_id" insert="false" update="false"/>
+		<many-to-one name="certificateType" column="certificate_type_id"/>
+		<property name="statusCode" column="status_code"/>
+		<many-to-one name="statusLink" column="status_code" insert="false" update="false"/>
+		<property name="issueDate" column="issue_date"/>
+		<property name="expireDate" column="expire_date"/>
+		<property name="issueBy" column="issue_by"/>
+		<property name="createDate" column="create_datetime"/>
+		<property name="signature" column="signature"/>
+	</class>
+
+	<class name="CertificateRequest" table="certificate_request">
+		<id name="id" column="id">
+			<generator class="increment"/>
+		</id>
+		<timestamp name="modifyDate" column="modify_datetime"/>
+		<many-to-one name="exporter" column="exporter_id"/>
+		<property name="originDistrict" column="origin_district"/>
+		<property name="originProvinceCode" column="origin_province"/>
+		<many-to-one name="originProvinceLink" column="origin_province" insert="false" update="false"/>
+		<property name="authorizedPersonName" column="authorized_person_name"/>
+		<property name="authorizedPersonId" column="authorized_person_id"/>
+		<property name="remarks" column="information_text"/>
+		<property name="createDate" column="create_datetime"/>
+		<one-to-one name="animalExport" class="CertificateRequestAnimalExport"/>
+		<one-to-one name="consignee" class="CertificateRequestConsignee"/>
+		<one-to-one name="halal" class="CertificateRequestHalal"/>
+		<one-to-one name="healthCertificate" class="CertificateRequestHealthCertificate"/>
+		<one-to-one name="invoice" class="CertificateRequestInvoice"/>
+		<one-to-one name="transport" class="CertificateRequestTransport"/>
+		<bag name="details" table="certificate_request_detail" inverse="true">
+			<key column="certificate_request_id"/>
+			<one-to-many class="CertificateRequestDetail"/>
+		</bag>
+	</class>
+
+	<class name="CertificateRequestAnimalExport" table="certificate_request_animal_export">
+		<id name="certificateRequestId" column="certificate_request_id">
+			<generator class="assigned"/>
+		</id>
+		<property name="liveAnimalDescription" column="live_animal_description"/>
+		<property name="liveAnimalAmount" column="live_animal_amount"/>
+		<property name="animalRemainsDescription" column="animal_remains_description"/>
+		<property name="animalRemainsAmount" column="animal_remains_amount"/>
+	</class>
+
+	<class name="CertificateRequestConsignee" table="certificate_request_consignee">
+		<id name="certificateRequestId" column="certificate_request_id">
+			<generator class="assigned"/>
+		</id>
+		<property name="consigneeName" column="consignee_name"/>
+		<property name="consigneeAddress" column="consignee_address"/>
+		<property name="destinationCountryCode" column="country_of_destination"/>
+		<many-to-one name="destinationCountryLink" column="country_of_destination" property-ref="countryCode" insert="false" update="false"/>
+	</class>
+
+	<class name="CertificateRequestHalal" table="certificate_request_halal">
+		<id name="certificateRequestId" column="certificate_request_id">
+			<generator class="assigned"/>
+		</id>
+		<property name="productDescription" column="product_description"/>
+		<property name="manufacturer" column="manufacturer"/>
+		<property name="halalNo" column="halal_no"/>
+		<property name="halalCompanyCode" column="halal_company_code"/>
+	</class>
+
+	<class name="CertificateRequestHealthCertificate" table="certificate_request_health_certificate">
+		<id name="certificateRequestId" column="certificate_request_id">
+			<generator class="assigned"/>
+		</id>
+		<property name="species" column="species"/>
+		<property name="productDescription" column="product_description"/>
+		<property name="codeNumber" column="code_number"/>
+		<property name="storageTemperature" column="storage_temperature"/>
+		<property name="storageTemperatureUom" column="storage_temperature_uom"/>
+		<property name="transportTemperature" column="transport_temperature"/>
+		<property name="transportTemperatureUom" column="transport_temperature_uom"/>
+	</class>
+
+	<class name="CertificateRequestInvoice" table="certificate_request_invoice">
+		<id name="certificateRequestId" column="certificate_request_id">
+			<generator class="assigned"/>
+		</id>
+		<property name="invoiceNo" column="invoice_no"/>
+		<property name="invoiceDate" column="invoice_date"/>
+		<property name="itemDescription" column="item_description"/>
+		<property name="itemHarmonizeCode" column="item_harmonize_code"/>
+		<property name="itemWeight" column="item_weight"/>
+		<property name="itemWeightUom" column="item_weight_uom"/>
+		<property name="itemPrice" column="item_price"/>
+		<property name="itemPriceCurrencyCode" column="item_price_currency"/>
+		<many-to-one name="itemPriceCurrencyLink" column="item_price_currency" insert="false" update="false"/>
+		<property name="itemQuantity" column="item_quantity"/>
+		<property name="packageType" column="package_type"/>
+	</class>
+
+	<class name="CertificateRequestTransport" table="certificate_request_transport">
+		<id name="certificateRequestId" column="certificate_request_id">
+			<generator class="assigned"/>
+		</id>
+		<property name="shipmentDate" column="shipment_date"/>
+		<property name="transportModeCode" column="transport_mode"/>
+		<many-to-one name="transportModeLink" column="transport_mode" insert="false" update="false"/>
+		<property name="journeyId" column="journey_id"/>
+		<property name="loadingLocationCode" column="loading_location"/>
+		<many-to-one name="loadingLocationLink" column="loading_location" insert="false" update="false"/>
+		<property name="dischargeLocationCode" column="discharge_location"/>
+		<many-to-one name="dischargeLocationLink" column="discharge_location" insert="false" update="false"/>
+		<property name="dispatcherName" column="dispatcher_name"/>
+		<property name="dispatcherAddress" column="dispatcher_address"/>
+	</class>
+
+	<class name="CertificateRequestDetail" table="certificate_request_detail">
+		<id name="id" column="id">
+			<generator class="increment"/>
+		</id>
+		<timestamp name="modifyDate" column="modify_datetime"/>
+		<property name="certificateRequestId" column="certificate_request_id"/>
+		<property name="certificateTypeId" column="certificate_type_id"/>
+		<many-to-one name="certificateTypeLink" column="certificate_type_id" insert="false" update="false"/>
+		<property name="statusCode" column="status_code"/>
+		<many-to-one name="statusLink" column="status_code" insert="false" update="false"/>
+		<property name="issueDate" column="issue_date"/>
+		<property name="expireDate" column="expire_date"/>
+		<property name="issueBy" column="issue_by"/>
+		<property name="signature" column="signature"/>
+		<property name="createDate" column="create_datetime"/>
+	</class>
+
+
+</hibernate-mapping>

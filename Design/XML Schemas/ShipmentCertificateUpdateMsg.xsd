@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.ku.ac.th/singlewindow/Schema" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ku.ac.th/singlewindow/Schema">
+  <element name="ShipmentCertificateUpdateMsg">
+    <complexType>
+      <sequence>
+        <element name="CertificateRequestID" type="string"/>
+        <element name="CertificateTypeID" type="string"/>
+        <element name="StatusCode" type="string"/>
+        <element name="IssueDate" type="date"/>
+        <element name="ExpireDate" type="date"/>
+        <element name="IssueBy" type="string"/>
+        <element name="Signature" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

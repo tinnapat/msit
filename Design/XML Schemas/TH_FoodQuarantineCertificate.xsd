@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema targetNamespace="THeFoodQuarantineCertificate_0_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:TH-TDED="THeDOCS TDED" xmlns:THeFQC="THeFoodQuarantineCertificate_0_1">
+  <xsd:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xsd:element name="FoodQuarantineCertificate" type="THeFQC:FoodQuarantineCertificateType"/>
+  <xsd:complexType name="FoodQuarantineCertificateType">
+    <xsd:sequence>
+      <xsd:element name="DocumentHeader" type="TH-TDED:DocumentHeaderType" minOccurs="0"/>
+      <xsd:element name="GoodsItem" type="THeFQC:GoodsItemType" minOccurs="0"/>
+      <xsd:element name="ConsignmentInformation" type="THeFQC:ConsignmentInformationType" minOccurs="0"/>
+      <xsd:element name="DocumentSummary" type="TH-TDED:DocumentSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentInformationType">
+    <xsd:sequence>
+      <xsd:element name="ConsigneeParty" type="TH-TDED:ConsigneePartyType" minOccurs="0"/>
+      <xsd:element name="ConsignorParty" type="TH-TDED:ConsignorPartyType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTransportDetails" type="THeFQC:ConsignmentTransportDetailsType" minOccurs="0"/>
+      <xsd:element name="ProductOriginAddress" type="THeFQC:ProductOriginAddressType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentTransportDetailsType">
+    <xsd:sequence>
+      <xsd:element name="TransportMeans" type="TH-TDED:TransportMeansType" minOccurs="0"/>
+      <xsd:element name="TransportMode" type="TH-TDED:TransportModeType" minOccurs="0"/>
+      <xsd:element name="PortOfDischarge" type="TH-TDED:PortOfDischargeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemPackagingType">
+    <xsd:sequence>
+      <xsd:element name="NumberOfPackages" type="UN-TDED:PackageQuantityType"/>
+      <xsd:element name="KindOfPackages" type="UN-TDED:PackageTypeTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemType">
+    <xsd:sequence>
+      <xsd:element name="ItemDescription" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xsd:element name="GoodsItemPackaging" type="THeFQC:GoodsItemPackagingType" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductOriginAddressType">
+    <xsd:sequence>
+      <xsd:element name="AddressStructured" type="THeFQC:ProductOriginAddressStructuredType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ProductOriginAddressStructuredType">
+    <xsd:sequence>
+      <xsd:element name="City" type="UN-TDED:CityNameTextType" minOccurs="0"/>
+      <xsd:element name="CountrySub-entity" type="UN-TDED:CountrySubdivisionTextType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

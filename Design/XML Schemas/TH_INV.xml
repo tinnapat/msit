@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<THeINV:Invoice xmlns:THeINV="THeInvoice_0_1" xmlns:TH-TDED="THeDOCS TDED" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:UN-TDED="urn:tded" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="THeInvoice_0_1 TH_INV.xsd">
+  <DocumentHeader>
+    <DocumentReference>
+      <DocumentType>INV</DocumentType>
+      <DocumentName>THeInvoice</DocumentName>
+      <DocumentNumber>380</DocumentNumber>
+    </DocumentReference>
+    <OrderInformation>
+      <InvoiceReference>
+        <InvoiceNumber>18 / RT88B</InvoiceNumber>
+      </InvoiceReference>
+      <SellerReference>
+        <ReferenceID>ES 6537 / 6</ReferenceID>
+      </SellerReference>
+      <BuyerReference>
+        <ReferenceID>Order SEA/54-77</ReferenceID>
+      </BuyerReference>
+      <OtherReference>
+        <ReferenceID> NA</ReferenceID>
+      </OtherReference>
+      <SellerParty>
+        <SellerID>SU 3843-3</SellerID>
+        <TaxReference>AU-487-SW</TaxReference>
+        <AddressStructured>
+          <Name>Stepshon GReen</Name>
+          <Street>120 Albert Street</Street>
+          <City>Melbourne</City>
+          <CountrySub-entity>AUMEL</CountrySub-entity>
+          <PostalZone>3002</PostalZone>
+          <CountryCode>AU</CountryCode>
+          <CountryName>Australia</CountryName>
+        </AddressStructured>
+        <InformationContact>
+          <ContactName>Mark Andrew</ContactName>
+          <CommunicationDetails>
+            <CommunicationNumber>+61 9415 1545</CommunicationNumber>
+            <CommunicationType>TEL</CommunicationType>
+          </CommunicationDetails>
+        </InformationContact>
+      </SellerParty>
+      <BuyerParty>
+        <AddressStructured>
+          <Name>David Walls</Name>
+          <Street>21 Rue du vidollet</Street>
+          <City>Basel</City>
+          <CountrySub-entity>CHBAS</CountrySub-entity>
+          <PostalZone>3205</PostalZone>
+          <CountryCode>CH</CountryCode>
+          <CountryName>Switzerland</CountryName>
+        </AddressStructured>
+        <InformationContact>
+          <ContactName>Smith Paul</ContactName>
+          <CommunicationDetails>
+            <CommunicationNumber>+41 22 91 12 545</CommunicationNumber>
+            <CommunicationType>FAX</CommunicationType>
+          </CommunicationDetails>
+        </InformationContact>
+      </BuyerParty>
+      <TermsOfDelivery>
+        <DeliveryTermsCoded>CFR</DeliveryTermsCoded>
+        <DeliveryTermsDescription>Cost and Freight</DeliveryTermsDescription>
+        <DeliveryTermLocation>
+          <LocationName>CHBAS</LocationName>
+        </DeliveryTermLocation>
+      </TermsOfDelivery>
+      <TermsOfPayment>
+        <PaymentTermsCode>CASHINV</PaymentTermsCode>
+        <PaymentTermsText>Payment on receipt of the Invoice</PaymentTermsText>
+        <PaymentCurrency>CHF</PaymentCurrency>
+      </TermsOfPayment>
+    </OrderInformation>
+    <ConsignmentInformation>
+      <UniqueConsignmentReference>
+        <UCR>001-003-004</UCR>
+      </UniqueConsignmentReference>
+      <ConsigneeParty>
+        <TaxReference>VYASS</TaxReference>
+        <ToOrderOfIndicator>Yes</ToOrderOfIndicator>
+        <AddressStructured>
+          <Name>Meyer AGXX</Name>
+          <Street>Pillar Street</Street>
+          <City>Test</City>
+          <CountrySub-entity>VUWER</CountrySub-entity>
+          <PostalZone>2648</PostalZone>
+          <CountryCode>VU</CountryCode>
+          <CountryName>VU</CountryName>
+        </AddressStructured>
+      </ConsigneeParty>
+      <FreightForwarderParty>
+        <ForwarderNameAddressUnstructured>
+          <NameAddressUnstructured>Kin Kawh Agency</NameAddressUnstructured>
+          <NameAddressUnstructured>Street name 12, Block #23</NameAddressUnstructured>
+          <NameAddressUnstructured>Yishun</NameAddressUnstructured>
+          <NameAddressUnstructured>Singpore 17452</NameAddressUnstructured>
+        </ForwarderNameAddressUnstructured>
+        <InformationContact>
+          <ContactName>Yin Tin V</ContactName>
+          <CommunicationDetails>
+            <CommunicationNumber>+65 65787877</CommunicationNumber>
+            <CommunicationType>TLX</CommunicationType>
+          </CommunicationDetails>
+        </InformationContact>
+      </FreightForwarderParty>
+      <CountryOfOrigin>
+        <CountryCode>AU</CountryCode>
+        <CountryName>Australia</CountryName>
+      </CountryOfOrigin>
+      <CountryOfDestination>
+        <CountryCode>CH</CountryCode>
+        <CountryName>Switzerland</CountryName>
+      </CountryOfDestination>
+      <ConsignmentTransportDetails>
+        <TransportMeans>
+          <TransportMeansCode>Vessel</TransportMeansCode>
+        </TransportMeans>
+        <TransportMode>
+          <TransportModeCode>4</TransportModeCode>
+          <TransportModeText>Air</TransportModeText>
+        </TransportMode>
+        <PortOfLoading>
+          <LoadingLocationID>AUMEL</LoadingLocationID>
+          <LoadingLocationName>Melbourne</LoadingLocationName>
+        </PortOfLoading>
+        <PortOfDischarge>
+          <DischargeLocationID>CHBSL</DischargeLocationID>
+          <DischargeLocationName>Basel</DischargeLocationName>
+        </PortOfDischarge>
+        <DeliveryLocation>
+          <DeliveryLocationID>CHGVA</DeliveryLocationID>
+          <DeliveryLocationName>Geneva</DeliveryLocationName>
+        </DeliveryLocation>
+      </ConsignmentTransportDetails>
+      <ConsignmentDetails>
+        <ConsignmentMarksAndNumbers>
+          <ShippingMark>1402-1412</ShippingMark>
+          <NumberOfPackages>13</NumberOfPackages>
+          <KindOfPackages>Pallets</KindOfPackages>
+          <ConsignmentDescription>Airfreight prepaid at Singapore</ConsignmentDescription>
+        </ConsignmentMarksAndNumbers>
+        <TransportEquipment>
+          <TransportEquipmentID>YTR-23/3-338</TransportEquipmentID>
+        </TransportEquipment>
+        <CommodityCodeType>
+          <CommodityCode>02101951</CommodityCode>
+        </CommodityCodeType>
+        <ConsignmentTotals>
+          <EquipmentQuantity>
+            <NumberOfPiecesOfEquipment>23</NumberOfPiecesOfEquipment>
+          </EquipmentQuantity>
+          <GrossWeight>
+            <Measure>250</Measure>
+            <MeasureUnitCode>KGM</MeasureUnitCode>
+          </GrossWeight>
+          <NetWeight>
+            <Measure>60</Measure>
+            <MeasureUnitCode>KG</MeasureUnitCode>
+          </NetWeight>
+          <Cube>
+            <Volume>520</Volume>
+            <MeasureUnitCode>MTQ</MeasureUnitCode>
+          </Cube>
+        </ConsignmentTotals>
+      </ConsignmentDetails>
+    </ConsignmentInformation>
+  </DocumentHeader>
+  <DocumentDetailsTrade>
+    <LineItem>
+      <ItemID>1</ItemID>
+      <ItemDescription>Metal working machinery</ItemDescription>
+      <NumberOfPackages>1</NumberOfPackages>
+      <KindOfPackages>Boxes</KindOfPackages>
+      <AdditionalInformation>
+        <InformationCode>2</InformationCode>
+        <InformationText>Package certified by Article 11</InformationText>
+      </AdditionalInformation>
+      <LineItemReferences>
+        <BuyerAssignedReference>
+          <BuyerAssignedID>KJ-JK0-12KJ-JK0-11</BuyerAssignedID>
+        </BuyerAssignedReference>
+        <SellerAssignedReference>
+          <SellerAssignedID>WD-SK0-83WD-SK0-11</SellerAssignedID>
+        </SellerAssignedReference>
+      </LineItemReferences>
+      <CountryOfOrigin>
+        <CountryCode>AU</CountryCode>
+      </CountryOfOrigin>
+      <ItemValues>
+        <ItemQuantity>
+          <Quantity>800</Quantity>
+          <MeasureUnitCode>SP</MeasureUnitCode>
+        </ItemQuantity>
+        <ItemAmount>
+          <ItemAmount>2500.11</ItemAmount>
+          <CurrencyCode>AUD</CurrencyCode>
+        </ItemAmount>
+      </ItemValues>
+      <LineItemMeasurements>
+        <GrossWeight>
+          <Measure>250</Measure>
+          <MeasureUnitCode>KG</MeasureUnitCode>
+        </GrossWeight>
+        <NetWeight>
+          <Measure>620</Measure>
+          <MeasureUnitCode>KG</MeasureUnitCode>
+        </NetWeight>
+        <Cube>
+          <Volume>520</Volume>
+          <MeasureUnitCode>MTQ</MeasureUnitCode>
+        </Cube>
+      </LineItemMeasurements>
+      <ProductInformation>
+        <ItemIdentification>
+          <ProductCode>84-93</ProductCode>
+        </ItemIdentification>
+        <ItemUnitPrice>
+          <UnitPrice>1200.10</UnitPrice>
+          <CurrencyCode>AUD</CurrencyCode>
+          <UnitPriceBasis>1000.10</UnitPriceBasis>
+          <MeasureUnitCode>TP</MeasureUnitCode>
+        </ItemUnitPrice>
+        <CommodityCodeType>
+          <CommodityCode>19021100</CommodityCode>
+        </CommodityCodeType>
+      </ProductInformation>
+    </LineItem>
+  </DocumentDetailsTrade>
+  <InvoiceSummary>
+    <InvoiceTotals>
+      <TotalValue>2575.00</TotalValue>
+      <CurrencyCode>AUD</CurrencyCode>
+      <DiscountValue>0.00</DiscountValue>
+      <DeliveryCharge>25.00</DeliveryCharge>
+      <MonetaryAmount>
+        <MonetaryValue>2500.00</MonetaryValue>
+        <MonetaryType>79</MonetaryType>
+      </MonetaryAmount>
+    </InvoiceTotals>
+    <InvoiceIssueDate>
+      <DateTime>20031023</DateTime>
+    </InvoiceIssueDate>
+    <DocumentSummary>
+      <DocumentDeclarations>
+        <DeclarationText>Compiled to regulation 4092</DeclarationText>
+      </DocumentDeclarations>
+      <Authentication>
+        <DocumentIssue>
+          <Place>AUMEL</Place>
+        </DocumentIssue>
+        <Signature>
+          <AuthenticationCode>3</AuthenticationCode>
+          <AuthenticationText>EPM Digital signature</AuthenticationText>
+          <DigitalSignatureText>x</DigitalSignatureText>
+        </Signature>
+      </Authentication>
+    </DocumentSummary>
+  </InvoiceSummary>
+</THeINV:Invoice>

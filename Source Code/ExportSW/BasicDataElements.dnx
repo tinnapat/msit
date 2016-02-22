@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.ibm.com/xtools/1.5.0/Notation" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.0/Umlnotation" xmi:id="_Sd_v0G_ZEdqFfMjNNoNmDw" type="Class" name="classdiagram.dnx">
+  <children xmi:id="_UTX9EG_ZEdqFfMjNNoNmDw" targetEdges="_3498gG_ZEdqFfMjNNoNmDw">
+    <children xmi:id="_UTkKUG_ZEdqFfMjNNoNmDw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_UTkKUW_ZEdqFfMjNNoNmDw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_UTqQ8G_ZEdqFfMjNNoNmDw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_UTqQ8W_ZEdqFfMjNNoNmDw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_UTqQ8m_ZEdqFfMjNNoNmDw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_UTqQ82_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_UTqQ9G_ZEdqFfMjNNoNmDw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_UTqQ9W_ZEdqFfMjNNoNmDw" collapsed="true"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_UTqQ9m_ZEdqFfMjNNoNmDw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_UTqQ92_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_UTqQ-G_ZEdqFfMjNNoNmDw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_UTqQ-W_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_UTX9EW_ZEdqFfMjNNoNmDw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Currency[jcu^name=Currency.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UTX9Em_ZEdqFfMjNNoNmDw" x="636" y="3180"/>
+  </children>
+  <children xmi:id="_ZrMWUG_ZEdqFfMjNNoNmDw" targetEdges="_4u77MG_ZEdqFfMjNNoNmDw">
+    <children xmi:id="_ZrMWU2_ZEdqFfMjNNoNmDw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_ZrMWVG_ZEdqFfMjNNoNmDw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_ZrMWVW_ZEdqFfMjNNoNmDw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_ZrMWVm_ZEdqFfMjNNoNmDw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_ZrMWV2_ZEdqFfMjNNoNmDw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZrMWWG_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_ZrMWWW_ZEdqFfMjNNoNmDw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZrMWWm_ZEdqFfMjNNoNmDw" collapsed="true"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_ZrSc8G_ZEdqFfMjNNoNmDw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_ZrSc8W_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_ZrSc8m_ZEdqFfMjNNoNmDw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_ZrSc82_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ZrMWUW_ZEdqFfMjNNoNmDw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Country[jcu^name=Country.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZrMWUm_ZEdqFfMjNNoNmDw" x="5724" y="3180"/>
+  </children>
+  <children xmi:id="_aeYt0G_ZEdqFfMjNNoNmDw" sourceEdges="_piUAAG_ZEdqFfMjNNoNmDw">
+    <children xmi:id="_aeYt02_ZEdqFfMjNNoNmDw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_aeYt1G_ZEdqFfMjNNoNmDw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_aeYt1W_ZEdqFfMjNNoNmDw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_aeYt1m_ZEdqFfMjNNoNmDw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_aeYt12_ZEdqFfMjNNoNmDw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_aeYt2G_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_aeYt2W_ZEdqFfMjNNoNmDw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_aeYt2m_ZEdqFfMjNNoNmDw" collapsed="true"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_aee0cG_ZEdqFfMjNNoNmDw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_aee0cW_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_aee0cm_ZEdqFfMjNNoNmDw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_aee0c2_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_aeYt0W_ZEdqFfMjNNoNmDw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Province[jcu^name=Province.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aeYt0m_ZEdqFfMjNNoNmDw" x="11130" y="3180"/>
+  </children>
+  <children xmi:id="_g2wlIG_ZEdqFfMjNNoNmDw" type="Note" targetEdges="_piUAAG_ZEdqFfMjNNoNmDw">
+    <children xmi:id="_g22rwG_ZEdqFfMjNNoNmDw" type="DiagramName"/>
+    <children xmi:id="_g22rwW_ZEdqFfMjNNoNmDw" type="Description"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_g2wlIW_ZEdqFfMjNNoNmDw" description="รหัสจังหวัดเพื่อการแลกเปลี่ยนข้อมูล&#xD;&#xA;มอก. 1099" fillColor="13369343" lineColor="6737151"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g2wlIm_ZEdqFfMjNNoNmDw" x="10494" y="1590" height="1031"/>
+  </children>
+  <children xmi:id="_t4tYgG_ZEdqFfMjNNoNmDw" type="Note" sourceEdges="_3498gG_ZEdqFfMjNNoNmDw">
+    <children xmi:id="_t4tYg2_ZEdqFfMjNNoNmDw" type="DiagramName"/>
+    <children xmi:id="_t4tYhG_ZEdqFfMjNNoNmDw" type="Description"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_t4tYgW_ZEdqFfMjNNoNmDw" description="UN Recommendation No. 9&#xD;&#xA;ISO 4217" fillColor="13369343" lineColor="6737151"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_t4tYgm_ZEdqFfMjNNoNmDw" x="636" y="1590" height="1031"/>
+  </children>
+  <children xmi:id="_0CeMEG_ZEdqFfMjNNoNmDw" type="Note" sourceEdges="_4u77MG_ZEdqFfMjNNoNmDw">
+    <children xmi:id="_0CeME2_ZEdqFfMjNNoNmDw" type="DiagramName"/>
+    <children xmi:id="_0CkSsG_ZEdqFfMjNNoNmDw" type="Description"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_0CeMEW_ZEdqFfMjNNoNmDw" description="UN Recommendation No. 3&#xD;&#xA;ISO 3166" fillColor="13369343" lineColor="6737151"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0CeMEm_ZEdqFfMjNNoNmDw" x="5724" y="1590" height="1084"/>
+  </children>
+  <children xmi:id="_-aCc0G_ZEdqFfMjNNoNmDw" sourceEdges="_C2pLAG_aEdqFfMjNNoNmDw">
+    <children xmi:id="_-aCc02_ZEdqFfMjNNoNmDw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_-aCc1G_ZEdqFfMjNNoNmDw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_-aCc1W_ZEdqFfMjNNoNmDw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_-aCc1m_ZEdqFfMjNNoNmDw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_-aCc12_ZEdqFfMjNNoNmDw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_-aCc2G_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_-aCc2W_ZEdqFfMjNNoNmDw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_-aCc2m_ZEdqFfMjNNoNmDw" collapsed="true"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_-aIjcG_ZEdqFfMjNNoNmDw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_-aIjcW_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_-aIjcm_ZEdqFfMjNNoNmDw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_-aIjc2_ZEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_-aCc0W_ZEdqFfMjNNoNmDw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=TransportMode[jcu^name=TransportMode.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-aCc0m_ZEdqFfMjNNoNmDw" x="15900" y="3180"/>
+  </children>
+  <children xmi:id="_AgzVAG_aEdqFfMjNNoNmDw" type="Note" targetEdges="_C2pLAG_aEdqFfMjNNoNmDw">
+    <children xmi:id="_AgzVA2_aEdqFfMjNNoNmDw" type="DiagramName"/>
+    <children xmi:id="_AgzVBG_aEdqFfMjNNoNmDw" type="Description"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_AgzVAW_aEdqFfMjNNoNmDw" description="UN Recommendation. 19" fillColor="13369343" lineColor="6737151"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AgzVAm_aEdqFfMjNNoNmDw" x="15900" y="1590" height="661"/>
+  </children>
+  <children xmi:id="_SdxCIG_gEdqFfMjNNoNmDw" targetEdges="_aKxKEG_gEdqFfMjNNoNmDw">
+    <children xmi:id="_Sd9PYG_gEdqFfMjNNoNmDw" type="ImageCompartment">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+      <layoutConstraint xmi:type="notation:Size" xmi:id="_Sd9PYW_gEdqFfMjNNoNmDw" width="1320" height="1320"/>
+    </children>
+    <children xmi:id="_Sd9PYm_gEdqFfMjNNoNmDw" type="Stereotype">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_Sd9PY2_gEdqFfMjNNoNmDw" type="Name">
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_SeJcoG_gEdqFfMjNNoNmDw" type="AttributeCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SeJcoW_gEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_SeJcom_gEdqFfMjNNoNmDw" type="OperationCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SeJco2_gEdqFfMjNNoNmDw" collapsed="true"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_SeJcpG_gEdqFfMjNNoNmDw" visible="false" type="SignalCompartment">
+      <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_SeJcpW_gEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <children xmi:id="_SeJcpm_gEdqFfMjNNoNmDw" visible="false" type="StructureCompartment">
+      <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_SeJcp2_gEdqFfMjNNoNmDw"/>
+      <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    </children>
+    <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_SdxCIW_gEdqFfMjNNoNmDw" showStereotype="Label"/>
+    <element xmi:type="uml:Class" href="vizref:///#jsrctype^vcore.target=uml2.Class^name=Location[jcu^name=Location.java[jpack^name=com.export.domain[jsrcroot^srcfolder=JavaSource[project^vcore.target=uml2.Model^id=ExportSW]]]]"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SdxCIm_gEdqFfMjNNoNmDw" x="5724" y="8268"/>
+  </children>
+  <children xmi:id="_UPO_wG_gEdqFfMjNNoNmDw" type="Note" sourceEdges="_aKxKEG_gEdqFfMjNNoNmDw">
+    <children xmi:id="_UPVGYG_gEdqFfMjNNoNmDw" type="DiagramName"/>
+    <children xmi:id="_UPVGYW_gEdqFfMjNNoNmDw" type="Description"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_UPO_wW_gEdqFfMjNNoNmDw" description="UN Recommendation No. 16" fillColor="13369343" lineColor="6737151"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UPO_wm_gEdqFfMjNNoNmDw" x="5724" y="6996" height="793"/>
+  </children>
+  <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_Sd_v0W_ZEdqFfMjNNoNmDw"/>
+  <edges xmi:id="_piUAAG_ZEdqFfMjNNoNmDw" type="NoteAttachment" source="_aeYt0G_ZEdqFfMjNNoNmDw" target="_g2wlIG_ZEdqFfMjNNoNmDw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_piUAAW_ZEdqFfMjNNoNmDw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_piUAAm_ZEdqFfMjNNoNmDw" points="[0, 1521, 0, -3731]$[0, 3109, 0, -2143]"/>
+  </edges>
+  <edges xmi:id="_3498gG_ZEdqFfMjNNoNmDw" type="NoteAttachment" source="_t4tYgG_ZEdqFfMjNNoNmDw" target="_UTX9EG_ZEdqFfMjNNoNmDw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_3498gW_ZEdqFfMjNNoNmDw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3498gm_ZEdqFfMjNNoNmDw" points="[-14, 1521, -14, -3731]$[-14, 3109, -14, -2143]"/>
+  </edges>
+  <edges xmi:id="_4u77MG_ZEdqFfMjNNoNmDw" type="NoteAttachment" source="_0CeMEG_ZEdqFfMjNNoNmDw" target="_ZrMWUG_ZEdqFfMjNNoNmDw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_4u77MW_ZEdqFfMjNNoNmDw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4u77Mm_ZEdqFfMjNNoNmDw" points="[-14, 1521, -14, -3731]$[-14, 3109, -14, -2143]"/>
+  </edges>
+  <edges xmi:id="_C2pLAG_aEdqFfMjNNoNmDw" type="NoteAttachment" source="_-aCc0G_ZEdqFfMjNNoNmDw" target="_AgzVAG_aEdqFfMjNNoNmDw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_C2pLAW_aEdqFfMjNNoNmDw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C2pLAm_aEdqFfMjNNoNmDw" points="[-14, 1521, -13, -3731]$[-14, 3109, -13, -2143]"/>
+  </edges>
+  <edges xmi:id="_aKxKEG_gEdqFfMjNNoNmDw" type="NoteAttachment" source="_UPO_wG_gEdqFfMjNNoNmDw" target="_SdxCIG_gEdqFfMjNNoNmDw">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_aKxKEW_gEdqFfMjNNoNmDw"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aKxKEm_gEdqFfMjNNoNmDw" points="[-3, 16, 10, -97]$[-3, 32, 10, -81]"/>
+  </edges>
+</notation:Diagram>

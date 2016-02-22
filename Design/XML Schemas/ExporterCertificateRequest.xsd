@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by TEAM (RENEGADE) -->
+<xs:schema targetNamespace="http://www.ku.ac.th/singlewindow/Schema" xmlns="http://www.ku.ac.th/singlewindow/Schema" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:TH-TDED="THeDOCS TDED" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+	<xs:element name="ExporterCertificateRequest" type="ExporterCertificateRequestType"/>
+	<xs:complexType name="ExporterCertificateRequestHeaderType">
+		<xs:sequence>
+			<xs:element name="CertificateTypeID" type="UN-TDED:DocumentTypeIdentifierType"/>
+			<xs:element name="CertificateTypeName" type="UN-TDED:DocumentNameTextType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExporterCertificateRequestType">
+		<xs:sequence>
+			<xs:element name="ExporterCertificateRequestHeader" type="ExporterCertificateRequestHeaderType"/>
+			<xs:element name="ExporterInformation" type="ExporterInformationType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExporterInformationType">
+		<xs:sequence>
+			<xs:element name="ExporterID" type="TH-TDED:ThaiPartyIdentifierType"/>
+			<xs:element name="BirthDate" type="TH-TDED:PersonBirthDateDateTimeType"/>
+			<xs:element name="AddressStructured" type="TH-TDED:AddressStructuredType" minOccurs="0"/>
+			<xs:element name="FactoryAddressStructured" type="TH-TDED:AddressStructuredType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

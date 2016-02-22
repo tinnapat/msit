@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema targetNamespace="THeHalalCertificate_0_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:THeHC="THeHalalCertificate_0_1" xmlns:TH-TDED="THeDOCS TDED">
+  <xsd:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xsd:element name="HalalCertificate" type="THeHC:HalalCertificateType"/>
+  <xsd:complexType name="GoodsItemType">
+    <xsd:sequence>
+      <xsd:element name="ItemID" type="UN-TDED:GoodsItemSequenceIdentifierType" minOccurs="0"/>
+      <xsd:element name="ItemDescription" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xsd:element name="HalalNumber" type="UN-TDED:GoodsItemTypeCodeType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HalalCertificateType">
+    <xsd:sequence>
+      <xsd:element name="DocumentHeader" type="TH-TDED:DocumentHeaderType" minOccurs="0"/>
+      <xsd:element name="InvoiceReference" type="TH-TDED:InvoiceReferenceType" minOccurs="0"/>
+      <xsd:element name="HalalCompanyCode" type="TH-TDED:HalalCompanyCodeType"/>
+      <xsd:element name="ConsigneeParty" type="TH-TDED:ConsigneePartyType" minOccurs="0"/>
+      <xsd:element name="ManufacturerParty" type="TH-TDED:ManufacturerPartyType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTransportDetails" type="TH-TDED:ConsignmentTransportDetailsType" minOccurs="0"/>
+      <xsd:element name="ItemDetails" type="THeHC:ItemDetailsType" minOccurs="0"/>
+      <xsd:element name="DocumentSummary" type="TH-TDED:DocumentSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemDetailsType">
+    <xsd:sequence>
+      <xsd:element name="GoodsItem" type="THeHC:GoodsItemType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

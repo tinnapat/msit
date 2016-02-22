@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<THeCoO:CertificateOfOrigin xmlns:THeCoO="THeCertificateOfOrigin_0_1" xmlns:TH-TDED="THeDOCS TDED" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="THeCertificateOfOrigin_0_1
+TH_COO.xsd">
+  <DocumentHeader>
+    <DocumentReference>
+      <TH-TDED:DocumentType>COG</TH-TDED:DocumentType>
+      <TH-TDED:DocumentName>Certificate Of Origin, Form General</TH-TDED:DocumentName>
+      <TH-TDED:DocumentNumber>861</TH-TDED:DocumentNumber>
+    </DocumentReference>
+    <ConsignmentInformation>
+      <ConsigneeParty>
+        <TH-TDED:ConsigneeNameAddressUnstructured>
+          <TH-TDED:NameAddressUnstructured>SOMSAK KAMLOONWASARAJ</TH-TDED:NameAddressUnstructured>
+          <TH-TDED:NameAddressUnstructured>82 KIPLING DR., MILL VALLEY, CA 94941</TH-TDED:NameAddressUnstructured>
+          <TH-TDED:NameAddressUnstructured>USA. TEL &amp; FAX: 001-1-415-388 1177</TH-TDED:NameAddressUnstructured>
+        </TH-TDED:ConsigneeNameAddressUnstructured>
+      </ConsigneeParty>
+      <ConsignorParty>
+        <TH-TDED:ConsignorNameAddressUnstructured>
+          <TH-TDED:NameAddressUnstructured>HONG KONG TRANSPACK CO., LTD</TH-TDED:NameAddressUnstructured>
+          <TH-TDED:NameAddressUnstructured>59/44 SOI 26, SUKHUMVIT ROAD. KLONGTON</TH-TDED:NameAddressUnstructured>
+          <TH-TDED:NameAddressUnstructured>KLONGTOEY, BANGKOK 10110 THAILAND</TH-TDED:NameAddressUnstructured>
+          <TH-TDED:NameAddressUnstructured>TEL 02-2590085-90, FAX: 02-2601825</TH-TDED:NameAddressUnstructured>
+        </TH-TDED:ConsignorNameAddressUnstructured>
+      </ConsignorParty>
+      <CountryOfOrigin>
+        <TH-TDED:CountryCode>TH</TH-TDED:CountryCode>
+        <TH-TDED:CountryName>THAILAND</TH-TDED:CountryName>
+      </CountryOfOrigin>
+      <CountryOfDestination>
+        <TH-TDED:CountryCode>US</TH-TDED:CountryCode>
+        <TH-TDED:CountryName>UNITED STATES</TH-TDED:CountryName>
+      </CountryOfDestination>
+      <ConsignmentTransportDetails>
+        <TH-TDED:TransportMeans>
+          <TH-TDED:TransportMeansText>SEAFREIGHT</TH-TDED:TransportMeansText>
+          <TH-TDED:TransportMeansJourneyID>V.LB074 / V.017E</TH-TDED:TransportMeansJourneyID>
+          <TH-TDED:TransportMeansIdentificationText>CAPE CHARLES / APL SWEDEN</TH-TDED:TransportMeansIdentificationText>
+          <TH-TDED:TransportMeansEstimatedDepartureDateTime>2004-07-25</TH-TDED:TransportMeansEstimatedDepartureDateTime>
+        </TH-TDED:TransportMeans>
+        <TH-TDED:TransportMode>
+          <TH-TDED:TransportModeText>SEA</TH-TDED:TransportModeText>
+        </TH-TDED:TransportMode>
+        <TH-TDED:PortOfLoading>
+          <TH-TDED:LoadingLocationID>BKK</TH-TDED:LoadingLocationID>
+          <TH-TDED:LoadingLocationName>BANGKOK</TH-TDED:LoadingLocationName>
+        </TH-TDED:PortOfLoading>
+      </ConsignmentTransportDetails>
+    </ConsignmentInformation>
+    <InvoiceReference>
+      <TH-TDED:InvoiceNumber>J024/2004</TH-TDED:InvoiceNumber>
+      <TH-TDED:InvoiceIssueDate>
+        <TH-TDED:IssueDate>2004-07-20</TH-TDED:IssueDate>
+      </TH-TDED:InvoiceIssueDate>
+    </InvoiceReference>
+  </DocumentHeader>
+  <DocumentDetailsTransport>
+    <GoodsItem>
+      <ItemID>1</ItemID>
+      <ItemDescription>
+        EARTHEN
+        EARTHEN DOLL
+        EARTHEN WALL HANGERS (DOLL DESIGN)
+        CRAMIC
+        CERAMIC LAMP SHADE
+      </ItemDescription>
+      <GoodsItemPackaging>
+        <ShippingMark>
+          SOMSAK
+          KAMLOONWASARAJ USA
+          VIA: OAKLAND
+        </ShippingMark>
+        <NumberOfPackages>1</NumberOfPackages>
+        <KindOfPackages>Case</KindOfPackages>
+      </GoodsItemPackaging>
+      <GoodsItemMeasurements>
+        <GrossWeight>
+          <Measure>271.00</Measure>
+          <MeasureUnitCode>KGS</MeasureUnitCode>
+        </GrossWeight>
+      </GoodsItemMeasurements>
+    </GoodsItem>
+  </DocumentDetailsTransport>
+  <DocumentSummary>
+    <Authentication>
+      <TH-TDED:DocumentIssue>
+        <TH-TDED:Place>DFT</TH-TDED:Place>
+      </TH-TDED:DocumentIssue>
+      <TH-TDED:DocumentIssueDate>
+        <TH-TDED:IssueDate>2004-10-23</TH-TDED:IssueDate>
+      </TH-TDED:DocumentIssueDate>
+      <TH-TDED:Signature>
+        <TH-TDED:AuthenticationText>MR. XXX YYYY</TH-TDED:AuthenticationText>
+      </TH-TDED:Signature>
+    </Authentication>
+  </DocumentSummary>
+</THeCoO:CertificateOfOrigin>

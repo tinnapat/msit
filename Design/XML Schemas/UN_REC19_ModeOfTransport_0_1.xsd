@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2003 UNeDOCS United Nations -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:UN_REC19="UN_REC19ModeofTransport_0_1" targetNamespace="UN_REC19ModeofTransport_0_1">
+  
+  <xsd:simpleType name="ModeOfTransportCodedType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="0"/>
+      <xsd:enumeration value="1"/>
+      <xsd:enumeration value="2"/>
+      <xsd:enumeration value="3"/>
+      <xsd:enumeration value="4"/>
+      <xsd:enumeration value="5"/>
+      <xsd:enumeration value="6"/>
+      <xsd:enumeration value="7"/>
+      <xsd:enumeration value="8"/>
+      <xsd:enumeration value="9"/>
+      <xsd:enumeration value="00"/>
+      <xsd:enumeration value="10"/>
+      <xsd:enumeration value="12"/>
+      <xsd:enumeration value="19"/>
+      <xsd:enumeration value="20"/>
+      <xsd:enumeration value="23"/>
+      <xsd:enumeration value="30"/>
+      <xsd:enumeration value="39"/>
+      <xsd:enumeration value="40"/>
+      <xsd:enumeration value="49"/>
+      <xsd:enumeration value="50"/>
+      <xsd:enumeration value="60"/>
+      <xsd:enumeration value="63"/>
+      <xsd:enumeration value="70"/>
+      <xsd:enumeration value="80"/>
+      <xsd:enumeration value="83"/>
+      <xsd:enumeration value="89"/>
+      <xsd:enumeration value="90"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

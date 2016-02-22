@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2003 UNeDOCS United Nations -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:UN_REC05="UN_REC05Incoterms_0_1" targetNamespace="UN_REC05Incoterms_0_1">  
+  <xsd:simpleType name="IncotermsCodedType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1"/>
+      <xsd:enumeration value="2"/>
+      <xsd:enumeration value="CFR"/>
+      <xsd:enumeration value="CIF"/>
+      <xsd:enumeration value="CIP"/>
+      <xsd:enumeration value="CPT"/>
+      <xsd:enumeration value="DAF"/>
+      <xsd:enumeration value="DDP"/>
+      <xsd:enumeration value="DDU"/>
+      <xsd:enumeration value="DEQ"/>
+      <xsd:enumeration value="DES"/>
+      <xsd:enumeration value="EXW"/>
+      <xsd:enumeration value="FAS"/>
+      <xsd:enumeration value="FCA"/>
+      <xsd:enumeration value="FOB"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

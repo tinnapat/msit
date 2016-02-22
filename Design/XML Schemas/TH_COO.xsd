@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="THeCertificateOfOrigin_0_1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:THeCoO="THeCertificateOfOrigin_0_1" xmlns:UN-TDED="UNeDOCS TDED 2003/07" xmlns:TH-TDED="THeDOCS TDED">
+  <xsd:import namespace="THeDOCS TDED" schemaLocation="TH-TDED.xsd"/>
+  <xsd:element name="CertificateOfOrigin" type="THeCoO:CertificateOfOriginType"/>
+  <xsd:complexType name="CertificateOfOriginType">
+    <xsd:sequence>
+      <xsd:element name="DocumentHeader" type="THeCoO:DocumentHeaderType" minOccurs="0"/>
+      <xsd:element name="DocumentDetailsTransport" type="THeCoO:DocumentDetailsTransportType" minOccurs="0"/>
+      <xsd:element name="DocumentSummary" type="THeCoO:DocumentSummaryType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsignmentInformationType">
+    <xsd:sequence>
+      <xsd:element name="ConsigneeParty" type="TH-TDED:ConsigneePartyType" minOccurs="0"/>
+      <xsd:element name="ConsignorParty" type="TH-TDED:ConsignorPartyType" minOccurs="0"/>
+      <xsd:element name="CountryOfOrigin" type="TH-TDED:CountryOfOriginType" minOccurs="0"/>
+      <xsd:element name="CountryOfDestination" type="TH-TDED:CountryOfDestinationType" minOccurs="0"/>
+      <xsd:element name="ConsignmentTransportDetails" type="TH-TDED:ConsignmentTransportDetailsType" minOccurs="0"/>
+      <xsd:element name="AdditionalInformation" type="TH-TDED:AdditionalInformationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentDetailsTransportType">
+    <xsd:sequence>
+      <xsd:element name="GoodsItem" type="THeCoO:GoodsItemType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentHeaderType">
+    <xsd:sequence>
+      <xsd:element name="DocumentReference" type="TH-TDED:DocumentReferenceType" minOccurs="0"/>
+      <xsd:element name="ConsignmentInformation" type="THeCoO:ConsignmentInformationType" minOccurs="0"/>
+      <xsd:element name="InvoiceReference" type="TH-TDED:InvoiceReferenceType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentSummaryType">
+    <xsd:sequence>
+      <xsd:element name="Authentication" type="TH-TDED:AuthenticationType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemGrossWeightType">
+    <xsd:sequence>
+      <xsd:element name="Measure" type="UN-TDED:ItemGrossWeightMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemMeasurementsType">
+    <xsd:sequence>
+      <xsd:element name="GrossWeight" type="THeCoO:GoodsItemGrossWeightType" minOccurs="0"/>
+      <xsd:element name="NetWeight" type="THeCoO:GoodsItemNetWeightType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemNetWeightType">
+    <xsd:sequence>
+      <xsd:element name="Measure" type="UN-TDED:GoodsItemNetWeightMeasureType"/>
+      <xsd:element name="MeasureUnitCode" type="UN-TDED:MeasurementUnitCodeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemPackagingType">
+    <xsd:sequence>
+      <xsd:element name="ShippingMark" type="UN-TDED:ItemShippingMarksTextType" minOccurs="0"/>
+      <xsd:element name="NumberOfPackages" type="UN-TDED:PackageQuantityType"/>
+      <xsd:element name="KindOfPackages" type="UN-TDED:PackageTypeTextType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsItemType">
+    <xsd:sequence>
+      <xsd:element name="ItemID" type="UN-TDED:GoodsItemSequenceIdentifierType" minOccurs="0"/>
+      <xsd:element name="TransportEquipmentID" type="UN-TDED:TransportEquipmentIdentificationIdentifierType" minOccurs="0" maxOccurs="99"/>
+      <xsd:element name="ItemDescription" type="UN-TDED:GoodsItemDescriptionTextType"/>
+      <xsd:element name="GoodsItemPackaging" type="THeCoO:GoodsItemPackagingType" maxOccurs="99"/>
+      <xsd:element name="AdditionalInformation" type="TH-TDED:AdditionalInformationType" minOccurs="0"/>
+      <xsd:element name="GoodsItemMeasurements" type="THeCoO:GoodsItemMeasurementsType" minOccurs="0"/>
+      <xsd:element name="OriginCriterion" type="TH-TDED:OriginCriterionType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>All C/O form except C/O General  Form</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransportMeansType">
+    <xsd:sequence>
+      <xsd:element name="TransportMeansCode" type="UN-TDED:TransportMeansTypeCodeType" minOccurs="0"/>
+      <xsd:element name="TransportMeansText" type="UN-TDED:TransportMeansTypeTextType" minOccurs="0"/>
+      <xsd:element name="TransportMeansJourneyID" type="UN-TDED:TransportMeansJourneyIdentifierType" minOccurs="0"/>
+      <xsd:element name="TransportMeansIdentificationText" type="UN-TDED:TransportMeansIdentificationTextType" minOccurs="0"/>
+      <xsd:element name="TransportMeansEstimatedDepartureDateTime" type="UN-TDED:TransportMeansEstimatedDepartureDateTimeType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<THeHC:HalalCertificate xmlns:THeHC="THeHalalCertificate_0_1" xmlns:TH-TDED="THeDOCS TDED" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="THeHalalCertificate_0_1 TH_HalalCertificate.xsd">
+  <DocumentHeader>
+    <TH-TDED:DocumentReference>
+      <TH-TDED:DocumentType>HL2</TH-TDED:DocumentType>
+      <TH-TDED:DocumentName>Halal Certificate</TH-TDED:DocumentName>
+      <TH-TDED:DocumentNumber>0444/2004</TH-TDED:DocumentNumber>
+    </TH-TDED:DocumentReference>
+  </DocumentHeader>
+  <InvoiceReference>
+    <TH-TDED:InvoiceNumber>KPT 2004/28</TH-TDED:InvoiceNumber>
+    <TH-TDED:InvoiceIssueDate>
+      <TH-TDED:IssueDate>2004-05-03</TH-TDED:IssueDate>
+    </TH-TDED:InvoiceIssueDate>
+  </InvoiceReference>
+  <HalalCompanyCode>215/1999</HalalCompanyCode>
+  <ConsigneeParty>
+    <TH-TDED:ConsigneeNameAddressUnstructured>
+      <TH-TDED:NameAddressUnstructured>BLENWEL AGENCIES</TH-TDED:NameAddressUnstructured>
+      <TH-TDED:NameAddressUnstructured>8 CHIA PING ROAD</TH-TDED:NameAddressUnstructured>
+      <TH-TDED:NameAddressUnstructured>02-11 JYC. FLATTED FACTORY SINGAPORE</TH-TDED:NameAddressUnstructured>
+      <TH-TDED:NameAddressUnstructured>619973</TH-TDED:NameAddressUnstructured>
+    </TH-TDED:ConsigneeNameAddressUnstructured>
+  </ConsigneeParty>
+  <ManufacturerParty>
+    <TH-TDED:ManufacturerNameAddressUnstructured>
+      <TH-TDED:NameAddressUnstructured>KEWPIE (THAILAND) CO., LTD</TH-TDED:NameAddressUnstructured>
+      <TH-TDED:NameAddressUnstructured>55 MOO 6, T. LUMOIN, A MUABG, RATCHABURI</TH-TDED:NameAddressUnstructured>
+      <TH-TDED:NameAddressUnstructured>THAILAND</TH-TDED:NameAddressUnstructured>
+    </TH-TDED:ManufacturerNameAddressUnstructured>
+  </ManufacturerParty>
+  <ConsignmentTransportDetails>
+    <TH-TDED:TransportMeans>
+      <TH-TDED:TransportMeansIdentificationText>CAPE CHARLES V.LB 052</TH-TDED:TransportMeansIdentificationText>
+    </TH-TDED:TransportMeans>
+    <TH-TDED:TransportMode>
+      <TH-TDED:TransportModeText>Maritime</TH-TDED:TransportModeText>
+    </TH-TDED:TransportMode>
+  </ConsignmentTransportDetails>
+  <ItemDetails>
+    <GoodsItem>
+      <ItemID>1</ItemID>
+      <ItemDescription>TOM YUM PASTE IS A SEASONING PASTE CONSISTING OF SHRIMP POWDER AND SEVERAL SPICES. IT OCCURS AS RED-BROWN TO DARK-BROWN COLOR HAVING CHARACTERISTIC ODOUR AND TASTE</ItemDescription>
+      <HalalNumber>75 215 017 04 44</HalalNumber>
+    </GoodsItem>
+  </ItemDetails>
+  <DocumentSummary>
+    <TH-TDED:Authentication>
+      <TH-TDED:DocumentIssueDate>
+        <TH-TDED:IssueDate>2004-05-10</TH-TDED:IssueDate>
+      </TH-TDED:DocumentIssueDate>
+      <TH-TDED:Signature>
+        <TH-TDED:AuthenticationText>MR. XXX YYYY</TH-TDED:AuthenticationText>
+        <TH-TDED:DigitalSignatureText>Ml5fQFRRtSdTlxNw7HoHKh3z7sAfuO0fEKlxSWbakEkxx3Y7IZeOuf3avdaOXd32BlMtoHUBetChi75TLinCvtXPPrfjXg3hAlfLB68oajMcztIS5AjXIg69+avqSrdLQf1AtwomWokqM3b4OqsFM2eJ
+4V3819u9RT8W6+oVvms=</TH-TDED:DigitalSignatureText>
+      </TH-TDED:Signature>
+    </TH-TDED:Authentication>
+  </DocumentSummary>
+</THeHC:HalalCertificate>
